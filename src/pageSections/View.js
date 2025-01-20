@@ -17,10 +17,10 @@ function View() {
         <SectionThree className='d-sec3' />
         <Footer id='contact' className='d-sec4' />
       </div>
-      <div className='mobileV'>
+      {/* <div className='mobileV'>
         <Navigation />
         <Homebanner id='home' className='desktop-home' />
-      </div>
+      </div> */}
     </div>
   );
 }

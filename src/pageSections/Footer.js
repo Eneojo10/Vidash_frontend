@@ -1,36 +1,86 @@
 import React from 'react'
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdOutlineAttachEmail } from "react-icons/md";
+import { CiLocationOn } from "react-icons/ci";
+import { RiFacebookFill } from "react-icons/ri";
+import { GrTwitter } from "react-icons/gr";
+import { FaLinkedinIn } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaYoutube } from "react-icons/fa6";
 
 function Footer() {
   return (
-    <div>
-      <div className='footersections'>
-        <div className='footerR1'>
-          <h3>VIDASH</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />{' '}
-            Magnam voluptatibus enim saepe.
-          </p>
-          <h3>News Letter</h3>
-          <div className='sender'>
-            <input type='text' className='searchSnd' />
-            <button className='button'>Send</button>
+    <div className='footer-color'>
+      <div className='footerdisplay'>
+        <div className='footer1'>
+          <h5>About Vidash City</h5><br />
+          <p>Vidash City Shelters is a renowned, value-focused real estate development company, committed to a threefold approach that emphasizes exceptional service, customer satisfaction, and quality delivery. </p>
+        </div>
+        <div className='footer1'>
+          <h5>Contact Us</h5><br />
+          <div className='location-'>
+            <div>
+              <CiLocationOn />
+            </div>
+            <div>
+              <p>DX 15, Barumark Estate, Wuye, Abuja </p>
+            </div>
+          </div>
+          <div className='fft d-flex'>
+            <div className='f-icons'>
+              <FaPhoneAlt />
+            </div>
+            <div>
+              <h5>07061396988</h5>
+            </div>
+          </div>
+          {/* <div className='fft d-flex'>
+            <div className='f-icons'>
+              <FaPhoneAlt />
+            </div>
+            <div>
+              <h5>09085274813</h5>
+            </div>
+          </div> */}
+          <div className='f--mail d-flex'>
+            <div className='f-icons'>
+              <MdOutlineAttachEmail />
+            </div>
+            <div className='fmail'>
+              <h5>vidashcityshelterslimited@gmail.com</h5>
+            </div>
           </div>
         </div>
-        <div className='footerR2'>
-          <h3>Services</h3>
-          <li>Construction Management</li>
-          <li>Renovation</li>
-          <li>Architecture</li>
+
+
+      </div>
+
+      <div className='fi-iconsflex'>
+        <div className='ficonsflex'>
+          <div>
+            <p>
+              &copy; Vidash. All rights reserved.
+            </p>
+          </div>
+          <div className='footer--icons'>
+            <div>
+              <RiFacebookFill />
+            </div>
+            <div>
+              <GrTwitter />
+            </div>
+            <div>
+              <FaLinkedinIn />
+            </div>
+            <div>
+              <RiInstagramFill />
+            </div>
+            <div>
+              <FaYoutube />
+            </div>
+          </div>
         </div>
-        <div className='footerR3'>
-          <h3>Contact Us</h3>
-          <li>07061396988</li>
-          <li>07083399007</li>
-        </div>
-        <div className='fotterR4'>
-          <h3>Follow us</h3>
-          <div className='footerIcons'></div>
-        </div>
+
       </div>
     </div>
   );

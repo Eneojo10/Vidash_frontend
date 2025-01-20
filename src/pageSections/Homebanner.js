@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 // import Assets from './assets/Assets';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -8,11 +8,12 @@ import AllProperties from './AllProperties';
 import { FaSearch } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import Cards from './assets/Cards';
-import {data} from '../data.js'
+import { data } from '../data.js'
 import { TbCurrencyNaira } from 'react-icons/tb';
 import MobileServices from './mobilepages/MobileServices.js';
 import MobileFooter from './mobilepages/MobileFooter.js';
 import Mobilespecial from './mobilepages/Mobilespecial.js';
+import { MdArrowUpward } from "react-icons/md";
 
 
 
@@ -23,6 +24,33 @@ function Homebanner() {
   const [deActive, setDeActive] = useState('active');
   const [searchActive, setSearchActive] = useState('active');
   const [notify, setNotify] = useState('found');
+  const [showScroll, setShowScroll] = useState(false);
+  const [animate, setAnimate] = useState(false);
+
+
+  useEffect(() => {
+
+    setAnimate(true);
+
+
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScroll(true);
+      } else {
+        setShowScroll(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+
   function hide(e) {
     e.preventDefault();
     if (active === 'active' || deActive === true) {
@@ -48,6 +76,9 @@ function Homebanner() {
     e.preventDefault();
     if (searchActive === 'allProperties') {
       setSearchActive('active');
+      setSelcted('select');
+      setSelected1('select');
+      setSelected2('select');
     }
   }
   // data from the select tage to form the search key
@@ -64,9 +95,11 @@ function Homebanner() {
     alert(formData);
   };
   //  Data usage
-  const [selected, setSelcted] = useState([]);
-  const [select1, setSelected1] = useState([]);
-  const [select2, setSelected2] = useState([]);
+  const [selected, setSelcted] = useState("select");
+
+  console.log(selected)
+  const [select1, setSelected1] = useState("select");
+  const [select2, setSelected2] = useState("select");
   const handleSelected = (e) => {
     setSelcted(e);
   };
@@ -95,8 +128,51 @@ function Homebanner() {
   const [houses, setHoues] = useState([
     // area10:[],
   ])
+
+  var PropertiesNeeded = [
+    {
+      id: '1',
+      name: '',
+      type: 'duplex',
+      location: 'apo',
+      img: '/city1.jpeg',
+      price: '$200',
+    },
+    {
+      id: '2',
+      name: '',
+      type: 'flat',
+      location: 'apo',
+      img: '/city1.jpeg',
+      price: '$100',
+    },
+    {
+      id: '3',
+      name: '',
+      type: 'bungalow',
+      location: 'area1',
+      img: '/city1.jpeg',
+      price: '$400',
+    },
+    {
+      id: '4',
+      name: '',
+      type: 'duplex',
+      location: 'area1',
+      img: '/city1.jpeg',
+      price: '$350',
+    },
+    {
+      id: '5',
+      name: '',
+      type: 'bongalo',
+      location: 'apo',
+      img: '/city1.jpeg',
+      price: '$120',
+    },
+  ];
   // Searcher 
-   const arr = { property_type: select1.toString(), location: selected.toString()};
+  const arr = { property_type: select1.toString(), location: selected.toString() };
   const [search, setSearch] = useState({
     property_type: select1.toString(),
     location: selected.toString(),
@@ -104,54 +180,94 @@ function Homebanner() {
   const [mydata, setMydata] = useState([])
   var filtered_data = data.filter(
     (item) =>
-    item.Location == search.location &&
-    item.property_type == search.property_type
+      item.Location == search.location &&
+      item.property_type == search.property_type
+  );
+
+  useEffect(() => {
+    setSearch(arr);
+
+  }, []);
+
+
+
+  function searcher() {
+
+
+    console.log(filtered_data)
+    console.log(search)
+    let result = PropertiesNeeded.filter(
+      (item) =>
+        item.location === selected &&
+        item.type === select1 && item.price === select2
     );
+    // setSearch(arr);
+    // Not Found
+    if (result.length !== 0) {
+      console.log('Found');
+      setNotify('found');
+      // setMydata(filtered_data);
+    } else {
+      if (result.length <= 0) {
+        console.log(filtered_data);
+        setNotify('notfound');
+      }
 
-    useEffect(() => {
-      setSearch(arr);
+    }
 
-    }, []);
 
-    function searcher(e) {
-      // e.preventDefault();
-      console.log(filtered_data)
-      console.log(search)
-      filtered_data = data.filter(
-        (item) =>
-          item.Location == search.location &&
-          item.property_type == search.property_type
-      );
-      // setSearch(arr);
-      // Not Found
-        if (filtered_data.length !== 0 && filtered_data.length >= 0 ){
-          console.log('Found');
-          setNotify('found');
-          // setMydata(filtered_data);
-        } else {
-          if (filtered_data.length === 0 && filtered_data.length !== true) {
-            console.log(filtered_data);
-            setNotify('notfound');
-          }          
-          
-        }
 
-        setMydata(filtered_data);
+    if (searchActive === 'active') {
+      setSearchActive('allProperties');
+    } else {
+      // setSearchActive('active');
+    }
 
+    // if (filtered_data.length === 0) {
+    //   setNotify('notfound');
+    //   console.log('notfound')
+    // }
+  }
+  let FinalResult = [];
+  const [searchinput, setSearchinput] = useState("")
+  function mbSeaacher() {
+
+    if (searchinput !== "") {
+      let result = searchinput.split(" ");
+      let valuesgotten = result.map(term => term.trim().toLocaleLowerCase())
+      const filteredData = PropertiesNeeded.filter((item) => {
+        let locationGotten = item.location.toLowerCase();
+        return valuesgotten.some(term => locationGotten.includes(term));
+
+      });
+
+      FinalResult = filteredData;
+      if (FinalResult.length !== 0) {
         if (searchActive === 'active') {
           setSearchActive('allProperties');
         } else {
           // setSearchActive('active');
         }
-        
-        // if (filtered_data.length === 0) {
-        //   setNotify('notfound');
-        //   console.log('notfound')
-        // }
+      }
+      console.log(FinalResult)
+    } else {
+      return false
     }
-        useEffect(() => {
-          // searcher();
-        }, []);
+
+
+
+
+
+
+
+
+
+
+
+  }
+  useEffect(() => {
+    // searcher();
+  }, []);
 
   // event handler for submission
   const handleSubmit = (event) => {
@@ -161,86 +277,54 @@ function Homebanner() {
 
     // testing emma solution
 
-    var PropertiesNeeded = [
-      {
-        id: '1',
-        name: '',
-        type: 'duplex',
-        location: 'apo',
-        img: '',
-        price: '',
-      },
-      {
-        id: '2',
-        name: '',
-        type: 'flat',
-        location: 'apo',
-        img: '',
-        price: '',
-      },
-      {
-        id: '3',
-        name: '',
-        type: 'bungalow',
-        location: 'area1',
-        img: '',
-        price: '',
-      },
-      {
-        id: '4',
-        name: '',
-        type: 'duplex',
-        location: 'area1',
-        img: '',
-        price: '',
-      },
-      {
-        id: '5',
-        name: '',
-        type: 'bongalo',
-        location: 'apo',
-        img: '',
-        price: '',
-      },
-    ];
 
-    // const datafiltered = PropertiesNeeded.filter((items)=>{
-    //   if (
-    //     items.location === search.property_type &&
-    //     items.type === search.property_type
-    //   ) {
-    //     return items;
-    //   }else{
-    //     console.log("not found in vidash")
-    //   }
-    // })
 
-    //   setMydata(datafiltered);
+
 
   };
 
-  
+
 
   return (
     <div className='homebanner'>
       <div className='homebannerM'>
-        <div className='homemobileBannerBackground'>
-          <h4>Find, Buy & Rent with us!</h4>
-          <p>Explore our range of beautiful properties suitable for you.</p>
+        <div className='homemobileBackground'>
+          <div class="content">
+            <h4>Find Your Dream Home</h4>
+            <p>Discover properties that suit your lifestyle.</p>
 
-          <button className='buyMobile_btn'>
+          </div>
+          {/* <button className='buyMobile_btn'>
             <a href='#'>Buy</a>
           </button>
           <button className='rentMobile_btn'>
             <a href='#'>Rent</a>
-          </button>
+          </button> */}
         </div>
+
         {/* <div className='mobileSearchbar'>
-          <input type='text' className='m-srchbar' placeholder='Search' />
-          <FaSearch />
+          <input type='text' className='m-srchbar' placeholder='Search' onChange={(e) => setSearchinput(e.target.value)} />
+          <FaSearch onClick={mbSeaacher} />
         </div> */}
 
-        <div className='categoryHolder'>
+
+        {/* <div className={searchActive}>
+          {FinalResult.map((data) => {
+            console.log(data);
+            return (
+              <div key={data.id}>
+                <p>price: {data.price}</p>
+                <p>location: {data.location}</p>
+                <p>type: {data.type}</p>
+              </div>
+            );
+          })}
+
+
+        </div> */}
+
+
+        {/* <div className='categoryHolder'>
           <h3>Properties Categories</h3>
           <div className='categoryButton'>
             <button className='mobile-button'>Houses</button>
@@ -248,9 +332,9 @@ function Homebanner() {
             <button className='mobile-button'>Duplex</button>
             <button className='mobile-button'>Flat</button>
           </div>
-        </div>
+        </div> */}
 
-        <div className='popularSec'>
+        {/* <div className='popularSec'>
           <div className='caption'>
             <div className='title'>
               <h3>Most Popular</h3>
@@ -284,10 +368,10 @@ function Homebanner() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <MobileServices />
-        <Mobilespecial/>
+        {/* <MobileServices />
+        <Mobilespecial /> */}
 
 
         {/* <Sider
@@ -296,39 +380,30 @@ function Homebanner() {
           thirdImage='flat7.jpeg'
         /> */}
       </div>
-      <MobileFooter className='mobileFooterTag' />
+      {/* <MobileFooter className='mobileFooterTag' /> */}
 
       <div className='desktopDetails'>
         <div className='homebannerImage'>
           <Sider
-            firstImage='duplex2.avif'
-            secImage='flat6.avif'
-            thirdImage='flat7.jpeg'
+            firstImage='TD 1.jpg'
+            secImage='TDP 1.jpg'
+            thirdImage='V4.jpg'
+            forthImage='DD 1.jpg'
+            fifthImage='DD 2.jpg'
+            sixthImage='DDD.jpg'
           />
-          {/* <img src='duplex4.png' alt='' className='homebannerImage' /> */}
+
         </div>
         <div>
           <button className='button'>Real Estate</button>
 
           <div className='headers'>
             <h1>
-              Let's hunt for your <br /> dream residence
+              Investing in real estate <br />is a smart decision making. <br /> However investing with the right <br /> company is what set's you apart.
             </h1>
           </div>
-          <p className='quote'>
-            Explore our range of beautiful properties with addition of <br />{' '}
-            separate accomodation suitable for you.
-          </p>
-          <div className='buyRent'>
-            <button
-              onClick={(e) => hide(e)}
-              style={{ borderRight: '1px solid black' }}
-            >
-              Buy
-            </button>
-            <button onClick={(e) => hide1(e)}>Rent</button>
-          </div>
-          <form action='' on onSubmit={handleSubmit}>
+
+          <form action='' onSubmit={handleSubmit}>
             <div className={active}>
               <div className='location'>
                 <p>Location</p>
@@ -336,21 +411,18 @@ function Homebanner() {
                 <DropdownButton
                   id='dropdown-button-dark-example2'
                   variant='secondary'
-                  title='select'
+                  title={selected}
                   className='mt-2'
                   data-bs-theme='white'
                   onSelect={handleSelected}
                 >
-                  {location.map((item) => (
+                  {PropertiesNeeded.map((data) => (
                     <>
-                      <Dropdown.Item eventKey={item}>{item}</Dropdown.Item>
+                      <Dropdown.Item eventKey={data.location}>{data.location}</Dropdown.Item>
                       <Dropdown.Divider />
                     </>
                   ))}
-                  {/* <Dropdown.Item eventKey={'Duplex'}>
-                    Dunamis Area3
-                  </Dropdown.Item>
-                  <Dropdown.Divider /> */}
+
                 </DropdownButton>
               </div>
               <div className='type'>
@@ -358,19 +430,18 @@ function Homebanner() {
                 <DropdownButton
                   id='dropdown-button-dark-example2'
                   variant='secondary'
-                  title='select'
+                  title={select1}
                   className='mt-2'
                   data-bs-theme='white'
                   onSelect={handleSelected1}
                 >
-                  {property_type.map((item) => (
+                  {PropertiesNeeded.map((item) => (
                     <>
-                      <Dropdown.Item eventKey={item}>{item}</Dropdown.Item>
+                      <Dropdown.Item eventKey={item.type}>{item.type}</Dropdown.Item>
                       <Dropdown.Divider />
                     </>
                   ))}
-                  {/* <Dropdown.Item eventKey={'Flat'}>Flat </Dropdown.Item>
-                  <Dropdown.Divider /> */}
+
                 </DropdownButton>
               </div>
               <div className='price'>
@@ -379,14 +450,18 @@ function Homebanner() {
                 <DropdownButton
                   id='dropdown-button-dark-example2'
                   variant='secondary'
-                  title='select'
+                  title={select2}
                   className='mt-2'
                   data-bs-theme='light'
                   onSelect={handleSelected2}
                 >
-                  <Dropdown.Item eventKey={'$100'}>$$350</Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item eventKey={'$200'}>$500</Dropdown.Item>
+                  {PropertiesNeeded.map((item) => (
+                    <>
+                      <Dropdown.Item eventKey={item.price}>{item.price}</Dropdown.Item>
+                      <Dropdown.Divider />
+                    </>
+                  ))}
+
                 </DropdownButton>
               </div>
               <button
@@ -464,12 +539,12 @@ function Homebanner() {
               Sorry we currently don't have any property matching your request
             </p>
             <div className='gridHolder'>
-              {mydata
+              {PropertiesNeeded
                 .filter((item) => {
                   if (item.length !== 0) {
                     return (
-                      item.Location == search.location &&
-                      item.property_type == search.property_type
+                      item.location === selected &&
+                      item.type === select1 && item.price === select2
                     );
                   }
                 })
@@ -495,45 +570,16 @@ function Homebanner() {
                   </div>
                 ))}
 
-              {/* <div className='gridCrads'>
-                <img src='duplex1.jpeg' alt='' className='gridImg' />
-                <h5>A Duplex</h5>
-                <span> An eight bedroom duplex</span>
-                <div className='priceTag'>
-                  <div className='cashP'>$120.00</div>
-                  <div className='cashD'>
-                    <button className='button'>Promo</button>
-                  </div>
-                </div>
-                <div className='cardbtn'>Buy Now</div>
-              </div>
-              <div className='gridCrads'>
-                <img src='duplex1.jpeg' alt='' className='gridImg' />
-                <h5>A Duplex</h5>
-                <span> An eight bedroom duplex</span>
-                <div className='priceTag'>
-                  <div className='cashP'>$120.00</div>
-                  <div className='cashD'>
-                    <button className='button'>Promo</button>
-                  </div>
-                </div>
-                <div className='cardbtn'>Buy Now</div>
-              </div>
-              <div className='gridCrads'>
-                <img src='duplex1.jpeg' alt='' className='gridImg' />
-                <h5>A Duplex</h5>
-                <span> An eight bedroom duplex</span>
-                <div className='priceTag'>
-                  <div className='cashP'>$120.00</div>
-                  <div className='cashD'>
-                    <button className='button'>Promo</button>
-                  </div>
-                </div>
-                <div className='cardbtn'>Buy Now</div>
-              </div> */}
+
             </div>
           </div>
         </div>
+
+        {showScroll && (
+          <div className='scroll-to-top' onClick={scrollToTop}>
+            <MdArrowUpward className='arrow-up-icon' />
+          </div>
+        )}
       </div>
     </div>
   );
