@@ -5,14 +5,11 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Sider from './assets/Sider';
 import AllProperties from './AllProperties';
 // import { type } from '@testing-library/user-event/dist/type';
-import { FaSearch } from 'react-icons/fa';
-import { FaLocationDot } from 'react-icons/fa6';
-import Cards from './assets/Cards';
+
 import { data } from '../data.js'
 import { TbCurrencyNaira } from 'react-icons/tb';
 import MobileServices from './mobilepages/MobileServices.js';
-import MobileFooter from './mobilepages/MobileFooter.js';
-import Mobilespecial from './mobilepages/Mobilespecial.js';
+
 import { MdArrowUpward } from "react-icons/md";
 
 
