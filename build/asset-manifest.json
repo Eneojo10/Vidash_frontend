@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.03aa59b8.css",
+    "main.js": "/static/js/main.7f4611e9.js",
+    "static/media/VBS_8109.jpg": "/static/media/VBS_8109.36ff4f846eaec6bf16af.jpg",
+    "static/media/site1.jpg": "/static/media/site1.ccd5fe8a88e8ae8bc252.jpg",
+    "static/media/VBS_8009.jpg": "/static/media/VBS_8009.8545867684d9659b7fce.jpg",
+    "static/media/site2.jpg": "/static/media/site2.2f9693062f2ef7a60ee6.jpg",
+    "static/media/v3.jpg": "/static/media/v3.cbc2ccef8d6a17dee445.jpg",
+    "static/media/v11.jpg": "/static/media/v11.9d8f38f69697b8c965aa.jpg",
+    "static/media/VBS_8001-1.jpg": "/static/media/VBS_8001-1.2b1739a1fc3bce393d67.jpg",
+    "static/media/ku_je.jpg": "/static/media/ku_je.594961e3a86e024b7e05.jpg",
+    "static/media/gf.jpg": "/static/media/gf.94f10beea9116910393c.jpg",
+    "static/media/DANGEROUSLY.jpg": "/static/media/DANGEROUSLY.6b6cdf7ffe252c729fc2.jpg",
+    "static/media/VH.jpg": "/static/media/VH.091fe29babc7298f5d26.jpg",
+    "static/media/TD 2.jpg": "/static/media/TD 2.9234cb430fca31b36979.jpg",
+    "static/media/idu.jpg": "/static/media/idu.c542f452f47f4b4dd62e.jpg",
+    "static/media/interior.jpg": "/static/media/interior.71f9bfe8d5947c35a100.jpg",
+    "static/media/vidashshelterLogo.png": "/static/media/vidashshelterLogo.2b89e2027371a2e0bc43.png",
+    "static/media/whatsApp.png": "/static/media/whatsApp.222a42db8a30a8055242.png",
+    "static/media/kurudu.webp": "/static/media/kurudu.3a8e3c041071573d0aa9.webp",
+    "static/media/lugbe.jpg": "/static/media/lugbe.2ae40621641a40311ba6.jpg",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.03aa59b8.css.map": "/static/css/main.03aa59b8.css.map",
+    "main.7f4611e9.js.map": "/static/js/main.7f4611e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03aa59b8.css",
+    "static/js/main.7f4611e9.js"
+  ]
+}
