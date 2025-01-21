@@ -4,7 +4,7 @@ import image from '../../Images/whatsApp.png'
 const WhatsAppButton = () => {
   const adminWhatsAppNumber = "07068181574"; 
   const predefinedMessage = "Hello, I would like to know more about your services.";
-  const whatsappLink = `https://wa.me/${adminWhatsAppNumber}?text=${encodeURIComponent(predefinedMessage)}`;
+  const whatsappLink = `https://wa.me/${`09036159207`}?text=${encodeURIComponent(predefinedMessage)}`;
 
   return (
     <div style={{ position: 'fixed', bottom: '20px', right: '80px' }}>

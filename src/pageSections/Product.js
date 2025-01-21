@@ -10,18 +10,18 @@ import { useParams } from 'react-router-dom';
 
 function Product() {
   const [animate, setAnimate] = useState(false);
-  const [visibleImages, setVisibleImages] = useState(3); 
+  // const [visibleImages, setVisibleImages] = useState(3); 
   const [showScroll, setShowScroll] = useState(false); 
   const [product, setProduct] = useState([]);
   const { nav_id } = useParams();
 
-  const images = [
-    { id: 1, src: image, title: 'Beryl' },
-    { id: 2, src: image, title: 'Beryl' },
-    { id: 3, src: image, title: 'Beryl' },
-    { id: 4, src: image, title: 'Beryl' },
-    { id: 5, src: image, title: 'Beryl' },
-  ];
+  // const images = [
+  //   { id: 1, src: image, title: 'Beryl' },
+  //   { id: 2, src: image, title: 'Beryl' },
+  //   { id: 3, src: image, title: 'Beryl' },
+  //   { id: 4, src: image, title: 'Beryl' },
+  //   { id: 5, src: image, title: 'Beryl' },
+  // ];
 
   useEffect(() => {
     setAnimate(true);
@@ -43,9 +43,9 @@ function Product() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const loadMore = () => {
-    setVisibleImages((prev) => prev + 3); 
-  };
+  // const loadMore = () => {
+  //   setVisibleImages((prev) => prev + 3); 
+  // };
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -101,15 +101,15 @@ function Product() {
           </div>
 
           <div className='productG'>
-            {product.slice(0, visibleImages).map((img, index) => (
-              <a href={`/ProjectDetails/${img._id}`} key={img._id  || index} className='pdetails' >
+            {product.map((imgItem, index) => (
+              <a href={`/ProjectDetails/${imgItem._id}`} key={imgItem._id  || index} className='pdetails' >
                 <div className='card'>
-                  <img src={img.imageUrl} alt={img.title} />
+                  <img src={imgItem.imageUrl} alt={imgItem.title} />
                   
                   <div className='card-color'>
                     <div className='cd-text'>
-                      <h4>{img.description}</h4>
-                      <p>{img.size}</p>
+                      <h4>{imgItem.description}</h4>
+                      <p>{imgItem.size}</p>
                       <div className='apt-deatails'>
                         
                         <div>
@@ -124,13 +124,13 @@ function Product() {
           </div>
 
           {/* Load More Button */}
-          {visibleImages < images.length && (
+          {/* {visibleImages < images.length && (
             <div className='load-more'>
               <button onClick={loadMore} className='load-more-btn'>
                 Load More
               </button>
             </div>
-          )}
+          )} */}
           <WhatsAppButton/>
           
           {showScroll && (

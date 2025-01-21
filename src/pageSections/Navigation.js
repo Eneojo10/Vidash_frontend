@@ -8,16 +8,16 @@ import image from '../Images/vidashshelterLogo.png'
 function Navigation() {
   const [active, setActive] = useState('navItems-M');
   const [isOpen, setIsOpen] = useState(false);
-  const [navigation, setNavigation] = useState([]); 
+  const [navigation, setNavigation] = useState([]);
   const [estate, setEstate] = useState([]);
 
   useEffect(() => {
     const fetchNav = async () => {
       try {
         const response = await axios.get(`${BASE_URL}/getAllNavs`);
-        console.log("Navigation response:", response.data); 
+        console.log("Navigation response:", response.data);
         if (response.data && Array.isArray(response.data.data)) {
-          setNavigation(response.data.data);  
+          setNavigation(response.data.data);
         } else {
           console.log("Unexpected data format for navigation:", response.data);
         }
@@ -40,7 +40,7 @@ function Navigation() {
           console.log('Estates response:', response.data);
 
           if (response.data && Array.isArray(response.data.data)) {
-            setEstate(response.data.data); 
+            setEstate(response.data.data);
             localStorage.setItem('estates', JSON.stringify(response.data.data)); // Save to localStorage
           } else {
             console.warn("Unexpected data format:", response.data);
@@ -73,7 +73,7 @@ function Navigation() {
           </a>
         </div>
         <div className="navItems">
-          
+
           <a href='/' className='navlink'>Home</a>
 
           <ul>
@@ -140,9 +140,13 @@ function Navigation() {
               </ul>
             )}
           </li>
-          <li>
-            <a href="/projects" className="nav-M-item">Projects</a>
-          </li>
+          {Array.isArray(navigation) && navigation.map((navItem, index) => {
+            return (
+              <a href={`/projects/${navItem._id}`} key={navItem._id || index} className="navlink">
+                {navItem.navigations}
+              </a>
+            );
+          })}
           <li>
             <a href="/About" className="nav-M-item">About Us</a>
           </li>

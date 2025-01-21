@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import { MdArrowUpward } from "react-icons/md";
-// import video1 from '../Images/frame.mp4';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from '../utils/global';
@@ -36,7 +35,6 @@ function ProductDetails() {
         const response = await axios.get(`${BASE_URL}/getBannerById/${id}`);
         const productData = response.data?.data;
 
-        // Ensure features is an array
         if (productData && typeof productData.features === 'string') {
           productData.features = productData.features.split('\n');
         }
@@ -53,9 +51,12 @@ function ProductDetails() {
     fetchProductDetails();
   }, [id]);
 
-
   if (loading) {
-    return <p>Loading product details...</p>;
+    return (
+      <div className="spinner-container">
+        <div className="spinner"></div>
+      </div>
+    );
   }
 
   if (error) {
@@ -85,14 +86,11 @@ function ProductDetails() {
           </div>
         </div>
 
-        <br /><br /><br /><br />
-
         <div className="colors">
           <div className="color1">
             <div className="features">
-              <div className='ftures'>
-              <h2>Features</h2>
-              
+              <div className="ftures">
+                <h2>Features</h2>
               </div>
               <div>
                 {product.features && product.features.length > 0 ? (
@@ -102,18 +100,8 @@ function ProductDetails() {
                 )}
               </div>
             </div>
-
           </div>
         </div>
-
-        <br /><br /><br /><br/><br/>
-
-        {/* <div className="productVideo">
-          <video width="100%" height="250" controls>
-            <source src={product.videoUrl || video1} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div> */}
       </div>
 
       {showScroll && (

@@ -56,13 +56,13 @@ function Terms() {
                     <div className='shadow-one'><br /><br />
                         <div className='terms-details'>
                             <h4>1. Introduction</h4>
-                            <p>Welcome to Vidash City Shelters. These terms and conditions outline the rules and regulations for the use of VidashCityShelters Website, located at VidashCityShelter.ng.
+                            <p>Welcome to Vidash City Shelters. These terms and conditions outline the rules and regulations for the use of VidashCityShelters Website, located at VidashCityShelter.com.ng
 
                                 By accessing this website, we assume you accept these terms and conditions. Do not continue to use VidashCityShelters if you do not agree to all of the terms and conditions stated on this page.</p>
                         </div><br />
                         <div className='terms-details'>
                             <h4>2. Intellectual Property Rights</h4>
-                            <p>Unless otherwise stated, Acerealestate and/or its licensors own the intellectual property rights for all material on Acerealestate. All intellectual property rights are reserved. You may access this from Acerealestate for your own personal use subjected to restrictions set in these terms and conditions.</p>
+                            <p>Unless otherwise stated, VidashCityShelters and/or its licensors own the intellectual property rights for all material on VidashCityShelters. All intellectual property rights are reserved. You may access this from VidashCityShelters for your own personal use subjected to restrictions set in these terms and conditions.</p>
                         </div><br />
                         <div className='terms-details'>
                             <h4>3. Restrictions</h4>
@@ -76,7 +76,7 @@ function Terms() {
                                     <li className='bullet'>Publishing any website material in any other media without prior consent.</li>
 
                                 </ul><br />
-                                Certain areas of this website are restricted from being accessed by you and Acerealestate may further restrict access by you to any areas of this website, at any time, in absolute discretion. Any user ID and password you may have for this website are confidential and you must maintain confidentiality as well.
+                                Certain areas of this website are restricted from being accessed by you and VidashCityShelters may further restrict access by you to any areas of this website, at any time, in absolute discretion. Any user ID and password you may have for this website are confidential and you must maintain confidentiality as well.
                             </p>
                         </div><br />
                         <div className='terms-details'>
@@ -113,19 +113,19 @@ function Terms() {
                             <h2>-  Changes to This Policy</h2>
                             <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
                             <h2>- Contact Us</h2>
-                            <p>If you have any questions or concerns about our privacy policy, please contact us at hello@VidashCityShelter.ng.</p>
+                            <p>If you have any questions or concerns about our privacy policy, please contact us at hello@VidashCityShelter.com.ng</p>
                         </div><br />
                         <div className='terms-details'>
                             <h4>5. No Warranties</h4>
-                            <p>This website is provided “as is,” with all faults, and Acerealestate express no representations or warranties, of any kind related to this website or the materials contained on this website. Also, nothing contained on this website shall be interpreted as advising you.</p>
+                            <p>This website is provided “as is,” with all faults, and VidashCityShelters express no representations or warranties, of any kind related to this website or the materials contained on this website. Also, nothing contained on this website shall be interpreted as advising you.</p>
                         </div><br />
                         <div className='terms-details'>
                             <h4>6. Limitation of Liability</h4>
-                            <p>In no event shall Acerealestate, nor any of its officers, directors, and employees, be held liable for anything arising out of or in any way connected with your use of this website whether such liability is under contract. Acerealestate, including its officers, directors, and employees shall not be held liable for any indirect, consequential, or special liability arising out of or in any way related to your use of this website..</p>
+                            <p>In no event shall VidashCityShelters, nor any of its officers, directors, and employees, be held liable for anything arising out of or in any way connected with your use of this website whether such liability is under contract. VidashCityShelters, including its officers, directors, and employees shall not be held liable for any indirect, consequential, or special liability arising out of or in any way related to your use of this website..</p>
                         </div><br />
                         <div className='terms-details'>
                             <h4>7. Indemnification</h4>
-                            <p>Welcome to Vidash City Shelters. These terms and conditions outline the rules and regulations for the use of VidashCityShelters Website, located at VidashCityShelter.ng.
+                            <p>Welcome to VidashCityShelters. These terms and conditions outline the rules and regulations for the use of VidashCityShelters Website, located at VidashCityShelter.ng.
 
                                 By accessing this website, we assume you accept these terms and conditions. Do not continue to use VidashCityShelters if you do not agree to all of the terms and conditions stated on this page.</p>
                         </div><br />
@@ -147,7 +147,7 @@ function Terms() {
                         </div><br />
                         <div className='terms-details'>
                             <h4>11. Entire Agreement</h4>
-                            <p>These Terms constitute the entire agreement between Acerealestate and you in relation to your use of this website, and supersede all prior agreements and understandings.</p>
+                            <p>These Terms constitute the entire agreement between VidashCityShelters and you in relation to your use of this website, and supersede all prior agreements and understandings.</p>
                         </div><br />
                     </div>
                     <div className='shadow-two'><br />
@@ -163,7 +163,7 @@ function Terms() {
                                     <div className='viewed-image'>
                                         <h2>Beryl Shelters</h2>
                                         <p>Limited Offer</p>
-                                        <span className='offer'>N5,000,000/Sqms</span>
+                                        {/* <span className='offer'>N5,000,000/Sqms</span> */}
                                     </div>
                                 </div><br />
                                 <div className='viewed-images-display'>
@@ -173,7 +173,7 @@ function Terms() {
                                     <div className='viewed-image'>
                                         <h2>Beryl Shelters</h2>
                                         <p>Limited Offer</p>
-                                        <span className='offer'>N5,000,000/Sqms</span>
+                                        {/* <span className='offer'>N5,000,000/Sqms</span> */}
                                     </div>
                                 </div><br />
                                 <div className='viewed-images-display'>
@@ -183,7 +183,7 @@ function Terms() {
                                     <div className='viewed-image'>
                                         <h2>Beryl Shelters</h2>
                                         <p>Limited Offer</p>
-                                        <span className='offer'>N5,000,000/Sqms</span>
+                                        {/* <span className='offer'>N5,000,000/Sqms</span> */}
                                     </div>
                                 </div>
 
