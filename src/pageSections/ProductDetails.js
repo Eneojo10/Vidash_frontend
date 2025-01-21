@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import { MdArrowUpward } from "react-icons/md";
-import video1 from '../Images/frame.mp4';
+// import video1 from '../Images/frame.mp4';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from '../utils/global';
@@ -108,12 +108,12 @@ function ProductDetails() {
 
         <br /><br /><br /><br/><br/>
 
-        <div className="productVideo">
+        {/* <div className="productVideo">
           <video width="100%" height="250" controls>
             <source src={product.videoUrl || video1} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        </div>
+        </div> */}
       </div>
 
       {showScroll && (

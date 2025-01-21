@@ -69,7 +69,7 @@ const SectionOneGrid = () => {
                   image={estateItem.imageUrl || 'default-image.jpg'}
                   title={estateItem.description}
                   size={estateItem.size}
-                  // link="/ProjectDetails"
+                  
                 />
               </a>
             ))
