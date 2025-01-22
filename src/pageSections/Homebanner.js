@@ -220,10 +220,7 @@ function Homebanner() {
       // setSearchActive('active');
     }
 
-    // if (filtered_data.length === 0) {
-    //   setNotify('notfound');
-    //   console.log('notfound')
-    // }
+
   }
   let FinalResult = [];
   const [searchinput, setSearchinput] = useState("")
@@ -380,147 +377,33 @@ function Homebanner() {
       {/* <MobileFooter className='mobileFooterTag' /> */}
 
       <div className='desktopDetails'>
-        <div className='homebannerImage'>
-          <Sider
-            firstImage='TD 1.jpg'
-            secImage='TDP 1.jpg'
-            thirdImage='V4.jpg'
-            forthImage='DD 1.jpg'
-            fifthImage='DD 2.jpg'
-            sixthImage='DDD.jpg'
-          />
+        <div className='slider-container-main'>
+          <div className='side-info-1'>
+            <button className='button'>Real Estate</button>
 
-        </div>
-        <div>
-          <button className='button'>Real Estate</button>
-
-          <div className='headers'>
-            <h1>
-              Investing in real estate <br />is a smart decision making. <br /> However investing with the right <br /> company is what set's you apart.
-            </h1>
+            <div className='headers'>
+              <h3>
+                Investing in real estate <br />is a smart decision making. <br /> However investing with the right <br /> company is what set's you apart.
+              </h3>
+            </div>
           </div>
 
-          <form action='' onSubmit={handleSubmit}>
-            <div className={active}>
-              <div className='location'>
-                <p>Location</p>
+          <div className='homebannerImage '>
+            <Sider
+              firstImage='TD 1.jpg'
+              secImage='TDP 1.jpg'
+              thirdImage='V4.jpg'
+              forthImage='DD 1.jpg'
+              fifthImage='DD 2.jpg'
+              sixthImage='DDD.jpg'
+            />
 
-                <DropdownButton
-                  id='dropdown-button-dark-example2'
-                  variant='secondary'
-                  title={selected}
-                  className='mt-2'
-                  data-bs-theme='white'
-                  onSelect={handleSelected}
-                >
-                  {PropertiesNeeded.map((data) => (
-                    <>
-                      <Dropdown.Item eventKey={data.location}>{data.location}</Dropdown.Item>
-                      <Dropdown.Divider />
-                    </>
-                  ))}
+          </div>
 
-                </DropdownButton>
-              </div>
-              <div className='type'>
-                <p>Type</p>
-                <DropdownButton
-                  id='dropdown-button-dark-example2'
-                  variant='secondary'
-                  title={select1}
-                  className='mt-2'
-                  data-bs-theme='white'
-                  onSelect={handleSelected1}
-                >
-                  {PropertiesNeeded.map((item) => (
-                    <>
-                      <Dropdown.Item eventKey={item.type}>{item.type}</Dropdown.Item>
-                      <Dropdown.Divider />
-                    </>
-                  ))}
-
-                </DropdownButton>
-              </div>
-              <div className='price'>
-                <p>Price Range</p>
-
-                <DropdownButton
-                  id='dropdown-button-dark-example2'
-                  variant='secondary'
-                  title={select2}
-                  className='mt-2'
-                  data-bs-theme='light'
-                  onSelect={handleSelected2}
-                >
-                  {PropertiesNeeded.map((item) => (
-                    <>
-                      <Dropdown.Item eventKey={item.price}>{item.price}</Dropdown.Item>
-                      <Dropdown.Divider />
-                    </>
-                  ))}
-
-                </DropdownButton>
-              </div>
-              <button
-                className='buyRentSearchBtn'
-                type='submit'
-                onClick={searcher}
-              >
-                Search
-              </button>
-            </div>
-            <div className={deActive}>
-              <div className='location'>
-                <p>Location</p>
-                <DropdownButton
-                  id='dropdown-button-dark-example2'
-                  variant='secondary'
-                  title='select'
-                  className='mt-2'
-                  data-bs-theme='white'
-                >
-                  <Dropdown.Item href='#/action-1'>Dunamis Area1</Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item href='#/action-2'>Kuje, Abuja </Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item href='#/action-3'>Lugbe, Abuja </Dropdown.Item>
-                </DropdownButton>
-              </div>
-              <div className='type'>
-                <p>Type</p>
-                <DropdownButton
-                  id='dropdown-button-dark-example2'
-                  variant='secondary'
-                  title='select'
-                  className='mt-2'
-                  data-bs-theme='light'
-                >
-                  <Dropdown.Item href='#/action-1'>Duplex</Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item href='#/action-2'>Flat</Dropdown.Item>
-                </DropdownButton>
-              </div>
-              <div className='price'>
-                <p>Price Range</p>
-
-                <DropdownButton
-                  id='dropdown-button-dark-example2'
-                  variant='secondary'
-                  title='select'
-                  className='mt-2'
-                  data-bs-theme='light'
-                >
-                  <Dropdown.Item href='#/action-1'>$100 - $200</Dropdown.Item>
-                  <Dropdown.Divider />
-                  <Dropdown.Item href='#/action-2'>$350 - $500</Dropdown.Item>
-                </DropdownButton>
-              </div>
-              <button className='buyRentSearchBtn' onClick={(e) => searcher(e)}>
-                Search
-              </button>
-            </div>
-          </form>
+          
         </div>
+
+
         <div className={searchActive}>
           <div>
             <div className='closebtn' onClick={(e) => closeBtn(e)}>

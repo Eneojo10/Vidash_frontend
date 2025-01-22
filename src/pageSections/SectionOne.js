@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../utils/global';
+import { ClipLoader } from 'react-spinners'; // Install with `npm install react-spinners`
 
 function SectionOne() {
   const [recent, setRecent] = useState([]);
+  const [loading, setLoading] = useState(true); // Add a loading state
 
   useEffect(() => {
     const fetchRecent = async () => {
@@ -18,6 +20,8 @@ function SectionOne() {
         }
       } catch (error) {
         console.log(error);
+      } finally {
+        setLoading(false); // Stop loading after fetching
       }
     };
     fetchRecent();
@@ -48,7 +52,11 @@ function SectionOne() {
           </div>
         </div>
         <div className='sectionOneGrid'>
-          {recent.length > 0 ? (
+          {loading ? (
+            <div className="spinner-container">
+              <ClipLoader color="#123abc" loading={loading} size={50} />
+            </div>
+          ) : recent.length > 0 ? (
             recent.map((recentItem, index) => (
               <a href={`/ProjectDetails/${recentItem._id}`} key={recentItem._id || index}>
                 <div className='card'>
@@ -69,7 +77,6 @@ function SectionOne() {
                 </div>
                 <br/>
               </a>
-              
             ))
           ) : (
             <p>No recent properties available</p>

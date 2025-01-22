@@ -1,8 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   padding: 0px;
   margin: 0;
   box-sizing: border-box;
-  /* background-color: ghostwhite; */
   background-color: var(--third-bg-color-lightgrey);
 }
 :root {
@@ -17,8 +20,10 @@
   display: none;
   display: none;
 }
-
-
+.carousel-inner img {
+  height: 400px; /* Adjust based on your design */
+  object-fit: cover;
+}
 /* moblie  */
 .mobileV,
 .desktopNavMobile,
@@ -199,26 +204,42 @@ ul li ul li:hover {
 .navItems ul li {
   margin-top: 18px;
 }
+.quote p {
+  /* font-size: 20px; */
+}
 /* Home section */
 .homebannerImage {
-  position: absolute;
-  left: 50%;
-  z-index: 100;
-  width: 600px;
+  overflow: hidden;
+  width: 50%;
+  /* position: absolute; */
+  /* left: 50%; */
+  /* z-index: 100; */
+  /* width: 600px; */
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.side-info-1 {
+  width: 50%;
+  margin: auto;
+  /* padding: 50px; */
+}
+.slider-container-main {
+  display: flex;
+  align-items: flex-start;
+  width: 90%;
+  margin: auto;
 }
 .homebannerImage img {
   height: 350px;
-  width: auto;
+  width: 100%;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 .homebanner {
-  padding: 0 100px 100px;
+  /* padding: 0 100px 100px; */
   margin-top: 70px;
 }
 .headers h1 {
   font-size: 2rem;
-  width: 45%;
+  /* width: 45%; */
 }
 .hea_ders {
   width: 50%;
@@ -229,7 +250,7 @@ ul li ul li:hover {
   color: white;
 }
 .quote {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-bottom: 40px;
 }
 .buyRent button {
@@ -508,12 +529,16 @@ ul li ul li:hover {
   border-radius: 10px;
   animation: border-animation 3s linear infinite;
 }
+.propertydev{
+  margin-top: -25px;
+}
 .propertydev h4 {
   font-weight: 700;
   color: white;
 }
 .propertydev p {
   color: white;
+  font-size: 14px;
 }
 @keyframes border-animation {
   0% {
@@ -641,7 +666,7 @@ h4 {
 }
 .headers {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 20px;
   margin: 50px 0px 50px;
 }
 .prodCategory {
@@ -738,7 +763,7 @@ h4 {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.ftures{
+.ftures {
   width: 30%;
   margin: auto;
 }
@@ -1188,7 +1213,7 @@ h4 {
   margin-bottom: 25px;
 }
 .cd-text h4 {
-  font-size: 18px;
+  font-size: 17px;
   padding-top: 10px;
   font-weight: 700;
 }
@@ -1225,18 +1250,18 @@ h4 {
 .arrow-up-icon {
   font-size: 24px;
 }
-.more-property-picture{
+.more-property-picture {
   width: 85%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.image-001{
+.image-001 {
   width: 95%;
   margin-bottom: 25px;
 }
-.image-001 img{
-width: 100%;
+.image-001 img {
+  width: 100%;
 }
 .scroll-to-top:hover {
   background-color: #d7b39a;
@@ -1377,10 +1402,6 @@ width: 100%;
 }
 .area-left-side h3 {
   font-weight: 700;
-}
-.property-details {
-  /* display: flex; */
-  /* justify-content: space-between; */
 }
 .property-tag {
   width: 80%;
@@ -1959,7 +1980,7 @@ width: 100%;
 .ddew {
   list-style-type: disc;
 }
-.ddew li{
+.ddew li {
   width: 90%;
   margin: auto;
   font-size: 18px;
@@ -1968,7 +1989,7 @@ width: 100%;
   width: 95%;
   margin: auto;
 }
-.terms-details h2{
+.terms-details h2 {
   font-size: 26px;
 }
 .terms2-details {
@@ -1982,10 +2003,10 @@ width: 100%;
   font-weight: 700;
   font-size: 28px;
 }
-.terms-details h5{
+.terms-details h5 {
   font-weight: 400;
 }
-.pf{
+.pf {
   font-weight: 700;
 }
 .terms--head {
@@ -1993,10 +2014,10 @@ width: 100%;
   justify-content: space-between;
   width: 19%;
 }
-.terms--head a{
+.terms--head a {
   text-decoration: none;
 }
-.home-terms{
+.home-terms {
   color: #d7b39a;
 }
 
@@ -2008,7 +2029,7 @@ width: 100%;
   position: absolute;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: transform 0.30s ease-out;
+  transition: transform 0.3s ease-out;
   z-index: 1000;
 }
 .rotating-spot-container {
@@ -2016,16 +2037,16 @@ width: 100%;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh; 
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
 .rotating-spot {
-  width: 50px; 
+  width: 50px;
   height: 50px;
-  background-color: #ff6347; 
-  border-radius: 50%; 
+  background-color: #ff6347;
+  border-radius: 50%;
   animation: rotate 3s linear infinite;
 }
 
@@ -2273,7 +2294,7 @@ width: 100%;
     text-decoration: none;
     color: black;
   }
-  .navlink{
+  .navlink {
     text-decoration: none;
     display: block;
     color: black;
@@ -2290,11 +2311,10 @@ width: 100%;
   .abt-vidash p {
     text-align: center;
   }
-  .color1
-   {
+  .color1 {
     width: 100%;
   }
-  .color2{
+  .color2 {
     display: none;
   }
   .fft {
@@ -2499,14 +2519,14 @@ width: 100%;
   .homebannerImage {
     display: none;
   }
-  .terms-shadow{
+  .terms-shadow {
     display: block;
   }
-  .shadow-one{
+  .shadow-one {
     width: 100%;
     margin-bottom: 35px;
   }
-  .shadow-two{
+  .shadow-two {
     width: 100%;
   }
   .desktopNavMobile {
@@ -2525,7 +2545,7 @@ width: 100%;
     justify-content: space-between;
     align-items: center;
   }
-  .leaders-gridd{
+  .leaders-gridd {
     display: block;
   }
   .area2-boxshadow,
@@ -2536,10 +2556,10 @@ width: 100%;
   .box1 {
     height: 950px;
   }
-  .box-1{
+  .box-1 {
     height: 950px;
   }
-  .box010{
+  .box010 {
     height: 350px;
   }
   .logo {
@@ -2586,7 +2606,7 @@ width: 100%;
   .ph-text {
     display: none;
   }
-  .terms--head{
+  .terms--head {
     width: 55%;
   }
   .ph-text-mobile {
@@ -2673,12 +2693,12 @@ width: 100%;
     width: 95%;
     margin: auto;
   }
-  .more-property-picture{
+  .more-property-picture {
     display: block;
     width: 95%;
     margin: auto;
   }
-  .image-001{
+  .image-001 {
     width: 100%;
   }
   .ph-text h3 {
@@ -2763,5 +2783,137 @@ width: 100%;
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 1450px) {
+  .homebannerImage img {
+    height: 500px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  }
+  .headers h3{
+    font-size: 44px;
+  }
+  .quote p{
+    font-size: 30px;
+  }
+  .headeros h1{
+    font-size: 35px;
+  }
+  .button{
+    padding: 15px 20px;
+    font-size: 25px;
+  }
+  .cards{
+    height: 355px;
+  }
+  .hea_ders{
+    width: 45%;
+    margin: auto;
+  }
+  .hea_ders h5{
+    font-size: 35px;
+  }
+  .propertydev h4{
+    font-size: 28px;
+  }
+  .propertydev p{
+    font-size: 24px;
+  }
+  .right-slide-image img{
+    height: 650px;
+  }
+  .areas-navigate h3{
+    font-size: 40px;
+  }
+  .areas-navigate p{
+    font-size: 22px;
+  }
+  .over-details h5{
+    font-size: 24px;
+  }
+  .why h5{
+    font-size: 38px;
+  }
+  .numbers h5{
+    font-size: 35px;
+  }
+  .numbers h4{
+    font-size: 30px;
+  }
+  .numbers p{
+    font-size: 26px;
+  }
+  .label p {
+    font-size: 24px;
+  }
+  .inspection-btn{
+    font-size: 24px;
+  }
+  .insp-details p{
+    font-size: 22px;
+  }
+  .client-slider p{
+    font-size: 23px;
+  }
+  .client-slider h5{
+    font-size: 25px;
+  }
+  .testi h4{
+    font-size: 42px;
+  }
+  .testi p{
+    font-size: 24px;
+  }
+  .testi-btn{
+    padding: 15px 20px;
+    font-size: 23px;
+  }
+  .navlink{
+    font-size: 24px;
+  }
+  .navlink_es{
+    font-size: 24px;
+  }
+  .footer1 h5{
+    font-size: 32px;
+  }
+  .footer1 p{
+    font-size: 23px;
+  }
+  .fn h5{
+    font-size: 22px;
+  }
+  .fn{
+    margin-top: -5px;
+  }
+  .fmail h5{
+    font-size: 22px;
+    /* margin-top: -9px; */
+  }
+  .fmail {
+    width: 92%;
+  }
+  .fn{
+    width: 80%;
+  }
+  .f--mail{
+    margin-top: 10px;
+  }
+  .f-icons{
+    font-size: 22px;
+  }
+  .ficonsflex{
+    margin-top: -35px;
+  }
+  .fotericons{
+    font-size: 21px;
+  }
+  .allright p{
+    font-size: 20px;
+  }
+  .inspection-form{
+    height: 850px;
   }
 }

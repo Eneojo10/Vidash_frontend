@@ -10,10 +10,9 @@ import Contact from './pageSections/Contact';
 import Estates from './AllEstates/Emerald';
 import AreasDetails from './pageSections/AreasDetails';
 import AreaDetailstwo from './pageSections/AreaDetailstwo';
-// import EstateDetails from './AllEstates/EstateDetails'
-// import More from './AllEstates/More';
 import Terms from './pageSections/Terms'
 import WhatsAppButton from './pageSections/whatsApp/WhatsAppButton';
+
 
 function App() {
   return (

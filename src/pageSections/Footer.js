@@ -19,10 +19,10 @@ function Footer() {
         <div className='footer1'>
           <h5>Contact Us</h5><br />
           <div className='location-'>
-            <div>
+            <div className='f-icons'>
               <CiLocationOn />
             </div>
-            <div>
+            <div className='fmail'>
               <p>DX 15, Barumark Estate, Wuye, Abuja </p>
             </div>
           </div>
@@ -30,18 +30,11 @@ function Footer() {
             <div className='f-icons'>
               <FaPhoneAlt />
             </div>
-            <div>
+            <div className='fn'>
               <h5>07061396988</h5>
             </div>
           </div>
-          {/* <div className='fft d-flex'>
-            <div className='f-icons'>
-              <FaPhoneAlt />
-            </div>
-            <div>
-              <h5>09085274813</h5>
-            </div>
-          </div> */}
+          
           <div className='f--mail d-flex'>
             <div className='f-icons'>
               <MdOutlineAttachEmail />
@@ -57,25 +50,25 @@ function Footer() {
 
       <div className='fi-iconsflex'>
         <div className='ficonsflex'>
-          <div>
+          <div className='allright'>
             <p>
               &copy; Vidash. All rights reserved.
             </p>
           </div>
           <div className='footer--icons'>
-            <div>
+            <div className='fotericons'>
               <RiFacebookFill />
             </div>
-            <div>
+            <div className='fotericons'>
               <GrTwitter />
             </div>
-            <div>
+            <div className='fotericons'>
               <FaLinkedinIn />
             </div>
-            <div>
+            <div className='fotericons'>
               <RiInstagramFill />
             </div>
-            <div>
+            <div className='fotericons'>
               <FaYoutube />
             </div>
           </div>

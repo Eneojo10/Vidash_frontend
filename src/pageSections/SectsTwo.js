@@ -248,22 +248,22 @@ function SectsTwo() {
           <div className='inspection'>
             <div className="container--">
               <div className='layers-flex'>
-                <div>
+                <div className='why'>
                   <h5>Why <br />Vidash City Shelters?</h5>
                 </div>
-                <div>
+                <div className='numbers'>
                   <h5>01.</h5>
                   <h4>Integrity</h4>
                   <p>We operate with the highest level of <br />honesty, professionalism and integrity <br />at all times.</p>
                 </div>
               </div><br />
               <div className='layers-flexx'>
-                <div>
+                <div className='numbers'>
                   <h5>02.</h5>
                   <h4>Partnership</h4>
                   <p>We adopt your own goals as our own:<br /> Your success is our success.</p>
                 </div>
-                <div>
+                <div className='numbers'>
                   <h5>03.</h5>
                   <h4>Excellence</h4>
                   <p>We strive for excellence and aim to <br />provide the highest level of service <br />possible.</p>
