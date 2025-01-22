@@ -2916,4 +2916,14 @@ h4 {
   .inspection-form{
     height: 850px;
   }
+  .cd-text h4{
+    font-size: 20px;
+  }
+  .cd-text h3{
+    font-size: 18px;
+  }
+  .details{
+    padding: 15px 20px;
+    font-size: 18px;
+  }
 }

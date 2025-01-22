@@ -63,7 +63,7 @@ function SectionOne() {
                   <img src={recentItem.imageUrl || 'default-image.jpg'} alt={recentItem.title || 'Property'} />
                   <div className='card-color'>
                     <div className='cd-text'>
-                      <small>{recentItem.property_name}</small>
+                      <h3>{recentItem.property_name}</h3>
                       <h4>{recentItem.description}</h4>
                         <br/>
                       {/* <p>{recentItem.size || 'Short description of the property'}</p> */}
