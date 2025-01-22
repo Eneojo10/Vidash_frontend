@@ -73,7 +73,7 @@ function ProductDetails() {
       <div className="productDetailsPage">
         <div className="ph-text">
           <h3>{product.description || "Product Details..."}</h3>
-          <p>{product.size || "Product Details"}</p>
+          {/* <p>{product.size || "Product Details"}</p> */}
         </div>
 
         <div className="product_image">
@@ -82,17 +82,17 @@ function ProductDetails() {
           </div>
           <div className="ph-text-mobile">
             <h3>{product.description || "Product Details..."}</h3>
-            <p>{product.size || "Product Details"}</p>
+            {/* <p>{product.size || "Product Details"}</p> */}
           </div>
         </div>
-
+        <br/><br/>
         <div className="colors">
           <div className="color1">
             <div className="features">
               <div className="ftures">
                 <h2>Features</h2>
               </div>
-              <div>
+              <div className='features-list'>
                 {product.features && product.features.length > 0 ? (
                   product.features.map((feature, index) => <p key={index}>{feature}</p>)
                 ) : (
