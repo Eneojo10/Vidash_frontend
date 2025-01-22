@@ -1212,6 +1212,9 @@ h4 {
   color: #8190a9;
   margin-bottom: 25px;
 }
+.cd-text h3{
+  font-size: 18px;
+}
 .cd-text h4 {
   font-size: 17px;
   padding-top: 10px;
@@ -2917,13 +2920,16 @@ h4 {
     height: 850px;
   }
   .cd-text h4{
-    font-size: 20px;
+    font-size: 14px;
   }
   .cd-text h3{
-    font-size: 18px;
+    font-size: 20px;
   }
   .details{
     padding: 15px 20px;
     font-size: 18px;
+  }
+  .card-color{
+    height: 140px;
   }
 }
