@@ -209,10 +209,10 @@ function AreaDetailstwo() {
                         <div className='box0'>
                             <div className='box1-details'>
                                 <div className='box1-display'>
-                                    <div>
+                                    <div className='ov'>
                                         <h4>Overview</h4>
                                     </div>
-                                    <div>
+                                    <div className='ov'>
                                         <h4>Property ID: HZAC-01</h4>
                                     </div>
                                 </div><br />
@@ -221,7 +221,7 @@ function AreaDetailstwo() {
                         </div><br /><br />
                         <div className='box2'>
                             <div className='box1-displayy'>
-                                <div>
+                                <div className='ov'>
                                     <h4>Description</h4>
                                 </div><br />
                                 <div className='boxline'></div><br />
@@ -247,7 +247,7 @@ function AreaDetailstwo() {
                         </div><br /> */}
                         <div className='box5'>
                             <div className='box1-displayy'>
-                                <div>
+                                <div className='ov'>
                                     <h4>Features</h4>
                                 </div><br />
                                 <div className='boxline'></div><br />
@@ -278,7 +278,7 @@ function AreaDetailstwo() {
                         </div><br />
                         <div className='box-1'>
                             <div className='box1-displayy'>
-                                <div>
+                                <div className='ov'>
                                     <h4>Schedule A Tour</h4>
                                 </div><br />
                                 <div className='boxline'></div><br />
@@ -327,7 +327,7 @@ function AreaDetailstwo() {
 
                                 </div><br />
 
-                                <div>
+                                <div className='ov'>
                                     <h4>Information</h4>
                                 </div><br />
                                 <div className='boxline'></div><br />

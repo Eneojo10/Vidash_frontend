@@ -2957,6 +2957,9 @@ h4 {
     height: 630px;
   }
   .area2--boxshadow{
-    margin-top: -20px;
+    margin-top: -10px;
+  }
+  .ov h4{
+    font-size: 22px;
   }
 }
