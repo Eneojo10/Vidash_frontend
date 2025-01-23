@@ -2938,4 +2938,7 @@ h4 {
   .features-list p{
     font-size: 20px;
   }
+  .property-tagg p{
+    font-size: 19px;
+  }
 }
