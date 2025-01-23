@@ -2947,4 +2947,7 @@ h4 {
   .beryl p{
     font-size: 20px;
   }
+  .propdetailsbtn{
+    margin-top: -25px;
+  }
 }
