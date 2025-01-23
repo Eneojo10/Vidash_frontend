@@ -231,7 +231,7 @@ function AreaDetailstwo() {
 
                         </div><br />
 
-                        <div className='box010'>
+                        {/* <div className='box010'>
                             <div className='box1-displayy'>
                                 <div>
                                     <h4>Details</h4>
@@ -244,7 +244,7 @@ function AreaDetailstwo() {
                                 
                                 <div className='boxline'></div>
                             </div>
-                        </div><br />
+                        </div><br /> */}
                         <div className='box5'>
                             <div className='box1-displayy'>
                                 <div>
