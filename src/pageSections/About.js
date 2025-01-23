@@ -144,7 +144,7 @@ function About() {
             <div className='abt-text'>
               <p>Our expertise spans across various real estate developments, including residential, commercial, and industrial projects within the Abuja region. Each of our projects undergoes a meticulous development process, starting from strategic land acquisition to careful land preparation, followed by the actual property development phase. Once the properties are developed, we facilitate seamless property sales and offer property management services to ensure the ongoing satisfaction of our clients. With our comprehensive approach to real estate development, we ensure that each phase is carried out with precision, ensuring maximum value creation at every stage. Through our projects, we are not just developing properties but also creating communities and fostering sustainable urban growth that benefits all stakeholders involved.
 
-                .</p>
+                </p>
             </div>
           </div>
           <div className='leadreship'>

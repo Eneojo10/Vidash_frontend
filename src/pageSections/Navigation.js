@@ -109,7 +109,9 @@ function Navigation() {
 
       <div className="desktopNavMobile">
         <div className="navLogo-m">
-          <img src={image} alt="" className="logo" />
+          <a href='/'>
+            <img src={image} alt="" className="logo" />
+          </a>
           <div className="menuicon">
             <AiOutlineMenu onClick={toggleNav} size={'1.5rem'} />
           </div>

@@ -19,7 +19,7 @@ function Footer() {
         <div className='footer1'>
           <h5>Contact Us</h5><br />
           <div className='location-'>
-            <div className='f-icons'>
+            <div className='f-iconss'>
               <CiLocationOn />
             </div>
             <div className='fmail'>
