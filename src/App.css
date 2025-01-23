@@ -2401,13 +2401,15 @@ h4 {
     margin-top: 10px;
   }
   .agree input[type="checkbox"] {
-    transform: scale(1.5); /* Increase the size by 1.5x */
-    margin-right: 10px; /* Adjust the spacing */
+    transform: scale(1.5); 
+    margin-right: 10px; 
   }
   .tour_btn {
     width: 100%;
   }
-
+  .con-tact{
+    display: block;
+  }
   .menuicon {
     color: var(--text-color);
     width: 30px;
@@ -2422,7 +2424,7 @@ h4 {
     display: block;
   }
   .contactSec {
-    height: 640px;
+    height: auto;
   }
   .similar-listings {
     display: block;
@@ -2662,9 +2664,7 @@ h4 {
     width: 95%;
     margin: auto;
   }
-  .form-form {
-    display: none;
-  }
+  
   .mainadress {
     width: 95%;
     margin: auto;
