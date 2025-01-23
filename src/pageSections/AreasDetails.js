@@ -56,7 +56,7 @@ function AreasDetails() {
                                             <h3>{e.header}</h3>
                                             <p>{e.overview}</p>
                                         </div>
-                                        <h5>1 Property</h5><br />
+                                        {/* <h5>1 Property</h5><br /> */}
                                         <a href={`/location/${e._id}`} key={e._id || index}>
                                             <div className='propimage'>
                                                 <img src={e.imageUrl} alt='' />
