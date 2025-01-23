@@ -71,7 +71,7 @@ function AreasDetails() {
                                             <div className='beryl'>
                                                 <h5>{e.property_name}</h5>
                                                 <p>{e.property_location}</p>
-                                                <a href='/location' className='line'>
+                                                <a href={`/location/${e._id}`} key={e._id} className='line'>
                                                     <div className='propdetailsbtn'>
                                                         <button className='details'>DETAILS</button>
                                                     </div>
