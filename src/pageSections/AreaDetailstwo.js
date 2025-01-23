@@ -190,7 +190,7 @@ function AreaDetailstwo() {
             <Navigation />
             <div className='area2'>
                 <div className='beryl-shelterss'>
-                    <div>
+                    <div className='ov'>
                         <h4>{site?.property_name}</h4>
                     </div>
 
