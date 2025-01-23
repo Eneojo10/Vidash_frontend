@@ -2939,6 +2939,12 @@ h4 {
     font-size: 20px;
   }
   .property-tagg p{
-    font-size: 19px;
+    font-size: 20px;
+  }
+  .beryl h5{
+    font-size: 20px;
+  }
+  .beryl p{
+    font-size: 18px;
   }
 }
