@@ -2673,7 +2673,7 @@ h4 {
     width: 100%;
   }
   .propdetailsbtn {
-    display: none;
+    /* display: none; */
   }
   .popbg {
     padding-top: 170px;

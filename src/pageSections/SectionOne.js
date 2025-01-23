@@ -65,17 +65,19 @@ function SectionOne() {
                     <div className='cd-text'>
                       <h3>{recentItem.property_name}</h3>
                       <h4>{recentItem.description}</h4>
-                        <br/>
+                      <br />
                       {/* <p>{recentItem.size || 'Short description of the property'}</p> */}
                       <div className='apt-deatails'>
-                        <div className='dtails'>
-                          <button className='details'>DETAILS</button>
-                        </div>
+                        <a href={`/projectDetails/${recentItem._id}`} key={recentItem._id || index}>
+                          <div className='dtails'>
+                            <button className='details'>DETAILS</button>
+                          </div>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <br/>
+                <br />
               </a>
             ))
           ) : (
