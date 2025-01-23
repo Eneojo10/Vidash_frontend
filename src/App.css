@@ -2956,4 +2956,7 @@ h4 {
   .area-right-side-boxshadowonetwo{
     height: 630px;
   }
+  .area2--boxshadow{
+    margin-top: -30px;
+  }
 }
