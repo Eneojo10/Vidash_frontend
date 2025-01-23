@@ -2956,10 +2956,14 @@ h4 {
   .area-right-side-boxshadowonetwo{
     height: 630px;
   }
-  .area2--boxshadow{
-    margin-top: -5px;
-  }
+  
   .ov h4{
-    font-size: 22px;
+    font-size: 23px;
+  }
+  .fea-turess h5{
+    font-size: 19px;
+  }
+  .fea-tures h5{
+    font-size: 19px;
   }
 }
