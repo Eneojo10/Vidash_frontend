@@ -5,12 +5,13 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from '../utils/global';
 
-const Card = ({ image, title, size, link }) => (
+const Card = ({ image, title, size, link, property_name }) => (
   <a href={link}>
     <div className="card">
       <img src={image} alt={title} />
       <div className="card-color">
         <div className="cd-text">
+          <h5>{property_name}</h5>
           <h4>{title}</h4>
           <p>{size}</p>
           <div className="apt-deatails">
