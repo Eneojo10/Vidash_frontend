@@ -53,7 +53,7 @@ const SectionOneGrid = () => {
       <Navigation />
       <div className="es-tates">
         {estate.length > 0 ? (
-          estate.map((e) => <h5 key={e.id || e.property_name}>{e.property_name}</h5>)
+          estate.map((e) => <h5 key={e.id}></h5>)
         ) : (
           <p>No estates available</p>
         )}
@@ -67,6 +67,7 @@ const SectionOneGrid = () => {
                 <Card
                   key={estateItem.id || estateItem.description}
                   image={estateItem.imageUrl || 'default-image.jpg'}
+                  property_name={estateItem.property_name}
                   title={estateItem.description}
                   size={estateItem.size}
                   
