@@ -11,7 +11,7 @@ const Card = ({ image, title, size, link, property_name }) => (
       <img src={image} alt={title} />
       <div className="card-color">
         <div className="cd-text">
-          <h5>{property_name}</h5>
+          <p>{property_name}</p>
           <h4>{title}</h4>
           <p>{size}</p>
           <div className="apt-deatails">
