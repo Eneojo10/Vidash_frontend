@@ -292,8 +292,8 @@ ul li ul li:hover {
 .sectionOneGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: 95%;
+  gap: 10px;
+  width: 97%;
   margin: auto;
 }
 .sectionOneGrid a {
@@ -323,14 +323,6 @@ ul li ul li:hover {
   overflow: hidden;
   margin-bottom: 20px;
 }
-/* .card-jasper{
-  width: 85%;
-  margin: auto;
-}
-.card-jasper img{
-  height: 520px;
-  width: 100%;
-} */
 .card img {
   height: 420px;
   width: 100%;
