@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../utils/global';
-import { ClipLoader } from 'react-spinners'; // Install with `npm install react-spinners`
+import { ClipLoader } from 'react-spinners'; 
 
 function SectionOne() {
   const [recent, setRecent] = useState([]);
-  const [loading, setLoading] = useState(true); // Add a loading state
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchRecent = async () => {
@@ -21,7 +21,7 @@ function SectionOne() {
       } catch (error) {
         console.log(error);
       } finally {
-        setLoading(false); // Stop loading after fetching
+        setLoading(false); 
       }
     };
     fetchRecent();
@@ -63,7 +63,7 @@ function SectionOne() {
                   <img src={recentItem.imageUrl || 'default-image.jpg'} alt={recentItem.title || 'Property'} />
                   <div className='card-color'>
                     <div className='cd-text'>
-                      <h3>{recentItem.property_name}</h3>
+                      <small>{recentItem.property_name}</small>
                       <h4>{recentItem.description}</h4>
                       <br />
                       {/* <p>{recentItem.size || 'Short description of the property'}</p> */}
