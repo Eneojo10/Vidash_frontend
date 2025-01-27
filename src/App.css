@@ -789,23 +789,19 @@ h4 {
   margin: auto;
 }
 .features {
-  padding: 80px;
+  /* padding: 80px; */
 }
 .addition {
   padding: 80px;
 }
 .color1 {
   background-color: #fafafa;
-  height: 500px;
+  height: 300px;
   width: 100%;
 }
-/* .color2 {
-  background-color: #f1f1f1;
-  height: 500px;
-  width: 50%;
-} */
+
 .colors {
-  width: 50%;
+  width: 35%;
   margin: auto;
 }
 .co {
