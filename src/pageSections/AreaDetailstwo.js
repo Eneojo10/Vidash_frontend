@@ -399,7 +399,7 @@ function AreaDetailstwo() {
                                             <div className='cd-text'>
                                                 <h4>{recentItem.description}</h4>
 
-                                                <p>{recentItem.size || 'Short description of the property'}</p>
+                                                <p>{recentItem.size || 'Short description of the property'}</p><br/>
                                                 <div className='apt-deatails'>
                                                     <div className='dtails'>
                                                         <button className='details'>DETAILS</button>
