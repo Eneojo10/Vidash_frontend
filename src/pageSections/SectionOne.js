@@ -66,7 +66,7 @@ function SectionOne() {
                       <small>{recentItem.property_name}</small>
                       <h4>{recentItem.description}</h4>
                       <br />
-                      {/* <p>{recentItem.size || 'Short description of the property'}</p> */}
+                      <p>{recentItem.size || 'Short description of the property'}</p>
                       <div className='apt-deatails'>
                         <a href={`/projectDetails/${recentItem._id}`} key={recentItem._id || index}>
                           <div className='dtails'>
