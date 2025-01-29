@@ -65,7 +65,7 @@ function SectionOne() {
                     <div className='cd-text'>
                       <small>{recentItem.property_name}</small>
                       <h4>{recentItem.type}</h4>
-                      <h4>{recentItem.description}</h4>
+                      {/* <h4>{recentItem.description}</h4> */}
                       <br />
                       <p>{recentItem.size || 'Short description of the property'}</p>
                       <div className='apt-deatails'>
