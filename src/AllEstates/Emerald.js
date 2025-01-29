@@ -5,14 +5,16 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from '../utils/global';
 
-const Card = ({ image, title, size, link, property_name }) => (
+const Card = ({ image, title, size, link, property_name, type, titles }) => (
   <a href={link}>
     <div className="card">
       <img src={image} alt={title} />
       <div className="card-color">
         <div className="cd-text">
           <small>{property_name}</small>
+          <h4>{type}</h4>
           <h4>{title}</h4>
+          <h4>{titles}</h4>
           <p>{size}</p>
           <div className="apt-deatails">
             <div>
@@ -69,7 +71,9 @@ const SectionOneGrid = () => {
                   key={estateItem.id || estateItem.description}
                   image={estateItem.imageUrl || 'default-image.jpg'}
                   property_name={estateItem.property_name}
+                  type={estateItem.type}
                   title={estateItem.description}
+                  titles={estateItem.descriptions}
                   size={estateItem.size}
                   
                 />
