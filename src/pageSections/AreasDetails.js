@@ -70,7 +70,7 @@ function AreasDetails() {
                                         <div className='prop-box-shadow'>
                                             <div className='beryl'>
                                                 <h5>{e.property_name}</h5>
-                                                <p>{e.property_location}</p>
+                                                <p>{e.description}</p>
                                                 <a href={`/location/${e._id}`} key={e._id} className='line'>
                                                     <div className='propdetailsbtn'>
                                                         <button className='details'>DETAILS</button>
