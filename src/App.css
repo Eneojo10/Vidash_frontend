@@ -290,12 +290,16 @@ ul li ul li:hover {
   font-weight: 700;
 }
 .sectionOneGrid {
-  display: flex;
-  /* grid-template-columns: repeat(2, 1fr); */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   width: 97%;
   margin: auto;
 }
+.sectionOneGrid img:nth-child(n+3) {
+  display: none; 
+}
+
 .sectionOneGrid a {
   text-decoration: none;
 }
