@@ -45,51 +45,51 @@ function AreasDetails() {
 
             <div className='area-section'>
                 <div className='area-details'>
-                    
-                        <div className='area-left-side'>
-                            
 
-                                <div className='property-details'>
-                                    {area.map((e,index) => (
-                                        <div className='property-tag'>
-                                        <div className='property-tagg'>
-                                            <h3>{e.header}</h3>
-                                            <p>{e.overview}</p>
+                    <div className='area-left-side'>
+
+
+                        <div className='property-details'>
+                            {area.map((e, index) => (
+                                <div className='property-tag'>
+                                    <div className='property-tagg'>
+                                        <h3>{e.header}</h3>
+                                        <p>{e.overview}</p>
+                                    </div>
+                                    {/* <h5>1 Property</h5><br /> */}
+                                    <a href={`/location/${e._id}`} key={e._id || index}>
+                                        <div className='propimage'>
+                                            <img src={e.imageUrl} alt='' />
+                                            <div className='popbg'>
+
+
+                                            </div>
+
                                         </div>
-                                        {/* <h5>1 Property</h5><br /> */}
-                                        <a href={`/location/${e._id}`} key={e._id || index}>
-                                            <div className='propimage'>
-                                                <img src={e.imageUrl} alt='' />
-                                                <div className='popbg'>
-
-
+                                    </a>
+                                    <div className='prop-box-shadow'>
+                                        <div className='beryl'>
+                                            <p>{e.property_name}</p>
+                                            <h5>{e.description}</h5>
+                                            <a href={`/location/${e._id}`} key={e._id} className='line'>
+                                                <div className='propdetailsbtn'>
+                                                    <button className='details'>DETAILS</button>
                                                 </div>
-
-                                            </div>
-                                        </a>
-                                        <div className='prop-box-shadow'>
-                                            <div className='beryl'>
-                                                <p>{e.property_name}</p>
-                                                <h5>{e.description}</h5>
-                                                <a href={`/location/${e._id}`} key={e._id} className='line'>
-                                                    <div className='propdetailsbtn'>
-                                                        <button className='details'>DETAILS</button>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
-                                    ))}
-                                    {/* <div className='default-tag'>
+                                </div>
+                            ))}
+                            {/* <div className='default-tag'>
                                     <h5>Sort by: Default Order</h5>
                                 </div> */}
-                                </div>
-                            
-
-
-
                         </div>
-                    
+
+
+
+
+                    </div>
+
 
                     <div className='area-right-side'>
                         <div className='grid-list'>
