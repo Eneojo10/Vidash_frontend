@@ -108,7 +108,7 @@ function AreaDetailstwo() {
         };
 
         fetchSiteDetails();
-    },[id]);
+    }, [id]);
 
     const handleSubmit = async () => {
 
@@ -203,7 +203,7 @@ function AreaDetailstwo() {
                         </div>
 
                         <div className='area2--image'>
-                        <img src={site?.imageUrl || '/path-to-default-image.jpg'} alt="Site" />
+                            <img src={site?.imageUrl || '/path-to-default-image.jpg'} alt="Site" />
 
                         </div>
                         <div className='box0'>
@@ -213,7 +213,7 @@ function AreaDetailstwo() {
                                         <h4>Overview</h4>
                                     </div>
                                     <div className='ov'>
-                                        <h4>Property ID: HZAC-01</h4>
+                                        <h4>Property ID: VDCS-01</h4>
                                     </div>
                                 </div><br />
                                 <div className='boxline'></div>
@@ -375,7 +375,7 @@ function AreaDetailstwo() {
                         </div>
                     </div>
                     <div className='onnn'>
-                
+
                         <div className='area2-boxshadow'>
                             <div className='area2--boxshadow'>
 
@@ -399,7 +399,7 @@ function AreaDetailstwo() {
                                             <div className='cd-text'>
                                                 <h4>{recentItem.description}</h4>
 
-                                                <p>{recentItem.size || 'Short description of the property'}</p><br/>
+                                                <p>{recentItem.size || 'Short description of the property'}</p><br />
                                                 <div className='apt-deatails'>
                                                     <div className='dtails'>
                                                         <button className='details'>DETAILS</button>
@@ -418,7 +418,7 @@ function AreaDetailstwo() {
                     <div className='boxline'></div>
                 </div>
 
-                <br />
+
 
             </div>
             <ToastContainer />
