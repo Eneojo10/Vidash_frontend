@@ -102,15 +102,15 @@ function ProductDetails() {
             </div>
           </div>
         </div>
-        <br/><br/>
+        
       </div>
-
+      
       {showScroll && (
         <div className="scroll-to-top" onClick={scrollToTop}>
           <MdArrowUpward className="arrow-up-icon" />
         </div>
       )}
-
+      <br/><br/>
       <Footer />
     </div>
   );
