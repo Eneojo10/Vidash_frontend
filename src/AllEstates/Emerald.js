@@ -88,7 +88,9 @@ const SectionOneGrid = () => {
                 titles={estateItem.descriptions}
                 size={estateItem.size}
               />
+              <br/><br/>
             </a>
+          
           ))
         ) : (
           <p>No estates found</p>

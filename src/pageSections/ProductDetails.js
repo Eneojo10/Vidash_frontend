@@ -110,7 +110,7 @@ function ProductDetails() {
           <MdArrowUpward className="arrow-up-icon" />
         </div>
       )}
-      <br/><br/>
+      
       <Footer />
     </div>
   );
