@@ -792,9 +792,7 @@ h4 {
   width: 75%;
   margin: auto;
 }
-.features {
-  /* padding: 80px; */
-}
+
 .addition {
   padding: 80px;
 }
@@ -1927,6 +1925,9 @@ h4 {
   color: white;
   padding: 10px;
   z-index: 1000;
+}
+.features-list{
+  display: flex;
 }
 .secondary-navigation a {
   color: white;
