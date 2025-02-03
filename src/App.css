@@ -1926,9 +1926,7 @@ h4 {
   padding: 10px;
   z-index: 1000;
 }
-.features-list{
-  display: flex;
-}
+
 .secondary-navigation a {
   color: white;
   margin-right: 15px;
