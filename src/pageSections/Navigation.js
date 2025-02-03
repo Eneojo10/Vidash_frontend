@@ -100,7 +100,7 @@ function Navigation() {
               </a>
             );
           })}
-          {/* <a href="/projects" className="navlink">Projects</a> */}
+          
           <a href="/About" className="navlink">About Us</a>
           <a href="/Contact" className="navlink">Contact</a>
         </div>
@@ -132,7 +132,7 @@ function Navigation() {
                 <h5>Feature Estate</h5>
                 {estate.length > 0 ? (
                   estate.map((estateItem, index) => (
-                    <Link key={index} to={`/${estateItem.estates.toLowerCase().replace(" ", "")}`}>
+                    <Link key={index} to={`/estate/${estateItem.estates.toLowerCase().replace(" ", "")}/${estateItem._id}`}>
                       <li><a>{estateItem.estates}</a></li>
                     </Link>
                   ))
