@@ -2,7 +2,7 @@ import React from 'react';
 import image from '../../Images/whatsApp.png'
 
 const WhatsAppButton = () => {
-  const adminWhatsAppNumber = "2349036159207"; 
+  const adminWhatsAppNumber = "2349064848204"; 
   const predefinedMessage = "Hello, I would like to know more about your services.";
   const whatsappLink = `https://wa.me/${adminWhatsAppNumber}?text=${encodeURIComponent(predefinedMessage)}`;
 
