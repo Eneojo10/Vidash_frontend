@@ -34,7 +34,7 @@ function Footer() {
               <h5>07061396988</h5>
             </div>
           </div>
-          
+
           <div className='f--mail d-flex'>
             <div className='f-icons'>
               <MdOutlineAttachEmail />
@@ -56,21 +56,32 @@ function Footer() {
             </p>
           </div>
           <div className='footer--icons'>
-            <div className='fotericons'>
-              <RiFacebookFill />
-            </div>
+            <a href='https://www.youtube.com/watch?v=4KfmNAuOdLs' className='links'>
+              <div className='fotericons'>
+                <FaYoutube />
+              </div>
+            </a>
+            <a href='https://web.facebook.com/profile.php?id=61561559969609&mibextid=wwXIfr&rdid=4aRGjsWGKf0p4uhq#' className='links'>
+              <div className='fotericons'>
+                <RiFacebookFill />
+              </div>
+            </a>
+
+            <a href='https://www.instagram.com/vidashcityshelters?igsh=ZmIzMzVvMmQyYnpm&utm_source=qr' className='links'>
+              <div className='fotericons'>
+                <RiInstagramFill />
+              </div>
+            </a>
             <div className='fotericons'>
               <GrTwitter />
             </div>
             <div className='fotericons'>
               <FaLinkedinIn />
             </div>
-            <div className='fotericons'>
-              <RiInstagramFill />
-            </div>
-            <div className='fotericons'>
-              <FaYoutube />
-            </div>
+
+
+
+
           </div>
         </div>
 

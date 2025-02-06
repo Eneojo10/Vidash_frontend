@@ -281,7 +281,9 @@ ul li ul li:hover {
   display: flex;
   justify-content: space-between;
 }
-
+.links{
+  color: white;
+}
 
 .slider-container {
   width: 50%;
