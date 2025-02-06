@@ -198,7 +198,7 @@ function SectsTwo() {
               <img src={image2} alt='' />
               <div className='areaoverlay'>
                 <div className='over-details'>
-                  <p>2 Projects</p>
+                  <p>6 Projects</p>
                   <h5>Lugbe Airport<br /> Road</h5>
                 </div>
               </div>
@@ -209,7 +209,7 @@ function SectsTwo() {
               <img src={image1} alt='' />
               <div className='areaoverlay'>
                 <div className='over-details'>
-                  <p>10 Projects</p>
+                  <p>3 Projects</p>
                   <h5>Idu</h5>
                 </div>
               </div>
@@ -220,7 +220,7 @@ function SectsTwo() {
               <img src={image} alt='' />
               <div className='areaoverlay'>
                 <div className='over-details'>
-                  <p>20 Projects</p>
+                  <p>4 Projects</p>
                   <h5>Kurudu</h5>
                 </div>
               </div>
@@ -230,7 +230,7 @@ function SectsTwo() {
               <img src={image3} alt='' />
               <div className='areaoverlay'>
                 <div className='over-details'>
-                  <p>9 Projects</p>
+                  <p>5 Projects</p>
                   <h5>Kuje</h5>
                 </div>
               </div>
