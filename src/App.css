@@ -293,7 +293,7 @@ ul li ul li:hover {
 }
 .aminu-images img{
   width: 100%;
-  height: 440px;
+  height: 420px;
   object-fit: cover;
 }
 .prev-button,
@@ -3014,7 +3014,7 @@ h4 {
     font-size: 19px;
   }
   .aminu-images img{
-    height: 580px;
+    height: 630px;
     object-position: top;
   }
   .view-btn{
