@@ -291,7 +291,8 @@ ul li ul li:hover {
 }
 .aminu-images img{
   width: 100%;
-  height: 420px;
+  max-height: 100%;
+  height: 475px;
   object-fit: cover;
 }
 .prev-button,
