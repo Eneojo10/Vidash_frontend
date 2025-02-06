@@ -3,7 +3,7 @@ import axios from "axios";
 import { BASE_URL } from "../utils/global";
 import { ClipLoader } from "react-spinners";
 import image1 from "../Images/aminu1.jpeg";
-import image2 from "../Images/aminu5.jpeg"; 
+import image2 from "../Images/aminu5.jpeg";
 import image3 from "../Images/aminu3.jpeg";
 import image4 from "../Images/aminu8.jpeg";
 
@@ -11,6 +11,7 @@ function SectionOne() {
   const [recent, setRecent] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showFullText, setShowFullText] = useState(false);
 
   const images = [image1, image2, image3, image4]; // Array of images for slider
 
@@ -50,6 +51,33 @@ function SectionOne() {
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
 
+  const fullText = `
+    Vidash City Shelters Welcomes Aminu De Comedian as Our New Brand Ambassador!
+    We at Vidash City Shelters are thrilled to announce our exciting new partnership with none other than Aminu De Comedian, who joins us as our official brand ambassador!
+    As one of Nigeria’s most beloved comedians, Aminu De Comedian has captured hearts with his humor, authenticity, and deep connection to the people. His passion for making people smile aligns perfectly with our mission—helping individuals and families secure their future through affordable land ownership in prime locations.
+    
+    Why Aminu De Comedian?
+    
+    At Vidash City Shelters, we believe in working with personalities who share our values of trust, integrity, and excellence. Aminu’s strong influence and credibility make him the perfect advocate to spread awareness about our premium, affordable land offers and help more people realize their real estate dreams.
+    
+    What This Means for You
+    
+    With Aminu De Comedian on board, we are taking our brand to the next level! This partnership means:
+    ✅ More exciting engagements and giveaways
+    ✅ Exclusive land deals for our customers
+    ✅ Increased awareness of safe and profitable land investments
+    
+    Join the Movement!
+    
+    Stay tuned for amazing content, promotions, and events featuring Aminu De Comedian as he takes you on a journey to discovering the best land deals in Nigeria.
+    
+    Follow us on all social media platforms @VidashCityShelters and be part of the #OwnYourLandWithVidash movement today!
+    
+    Welcome to the family, Aminu De Comedian! 🎉
+  `;
+
+  const truncatedText = fullText.substring(0, 800);
+
   const style1 = {
     display: "flex",
     alignItems: "center",
@@ -58,7 +86,7 @@ function SectionOne() {
 
   return (
     <div className="sectionOne" id="properties">
-      <br /><br /><br/>
+      <br /><br /><br />
       <div className="ambassador">
         <div className="slider-container">
           <button className="prev-button" onClick={prevSlide}>
@@ -72,30 +100,10 @@ function SectionOne() {
           </button>
         </div>
         <div className="amb-text">
-          <p>Vidash City Shelters Welcomes Aminu De Comedian as Our New Brand Ambassador!
-
-            We at Vidash City Shelters are thrilled to announce our exciting new partnership with none other than Aminu De Comedian, who joins us as our official brand ambassador!
-
-            As one of Nigeria’s most beloved comedians, Aminu De Comedian has captured hearts with his humor, authenticity, and deep connection to the people. His passion for making people smile aligns perfectly with our mission—helping individuals and families secure their future through affordable land ownership in prime locations.
-
-            Why Aminu De Comedian?
-
-            At Vidash City Shelters, we believe in working with personalities who share our values of trust, integrity, and excellence. Aminu’s strong influence and credibility make him the perfect advocate to spread awareness about our premium, affordable land offers and help more people realize their real estate dreams.
-
-            What This Means for You
-
-            With Aminu De Comedian on board, we are taking our brand to the next level! This partnership means:
-            ✅ More exciting engagements and giveaways
-            ✅ Exclusive land deals for our customers
-            ✅ Increased awareness of safe and profitable land investments
-
-            Join the Movement!
-
-            Stay tuned for amazing content, promotions, and events featuring Aminu De Comedian as he takes you on a journey to discovering the best land deals in Nigeria.
-
-            Follow us on all social media platforms @VidashCityShelters and be part of the #OwnYourLandWithVidash movement today!
-
-            Welcome to the family, Aminu De Comedian! 🎉</p>
+          <p>{showFullText ? fullText : truncatedText}...</p>
+          <button className="view-btn" onClick={() => setShowFullText(!showFullText)}>
+            {showFullText ? "View Less" : "View More"}
+          </button>
         </div>
       </div>
 

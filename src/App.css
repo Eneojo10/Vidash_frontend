@@ -284,11 +284,7 @@ ul li ul li:hover {
   justify-content: space-between;
 }
 
-.aminu-images img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
+
 .slider-container {
   width: 50%;
 }
@@ -297,6 +293,8 @@ ul li ul li:hover {
 }
 .aminu-images img{
   width: 100%;
+  height: 440px;
+  object-fit: cover;
 }
 .prev-button,
 .next-button {
@@ -349,6 +347,11 @@ ul li ul li:hover {
   text-align: center;
 }
 .estate-view-btn {
+  background: transparent;
+  border: none;
+  color: #a06b33;
+}
+.view-btn{
   background: transparent;
   border: none;
   color: #a06b33;
