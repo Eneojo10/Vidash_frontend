@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BASE_URL } from "../utils/global";
 import { ClipLoader } from "react-spinners";
-import image1 from "../Images/aminu1.jpeg";
-import image2 from "../Images/aminu5.jpeg";
-import image3 from "../Images/aminu3.jpeg";
-import image4 from "../Images/aminu8.jpeg";
+import image1 from "../Images/aminu2.jpeg";
+import image2 from "../Images/aminu1.jpeg";
+import image3 from "../Images/aminu6.jpeg";
+import image4 from "../Images/aminu7.jpeg";
 
 function SectionOne() {
   const [recent, setRecent] = useState([]);
@@ -53,6 +53,7 @@ function SectionOne() {
 
   const fullText = `
     Vidash City Shelters Welcomes Aminu De Comedian as Our New Brand Ambassador!
+    
     We at Vidash City Shelters are thrilled to announce our exciting new partnership with none other than Aminu De Comedian, who joins us as our official brand ambassador!
     As one of Nigeria’s most beloved comedians, Aminu De Comedian has captured hearts with his humor, authenticity, and deep connection to the people. His passion for making people smile aligns perfectly with our mission—helping individuals and families secure their future through affordable land ownership in prime locations.
     
@@ -76,7 +77,7 @@ function SectionOne() {
     Welcome to the family, Aminu De Comedian! 🎉
   `;
 
-  const truncatedText = fullText.substring(0, 800);
+  const truncatedText = fullText.substring(0, 260);
 
   const style1 = {
     display: "flex",
@@ -100,7 +101,8 @@ function SectionOne() {
           </button>
         </div>
         <div className="amb-text">
-          <p>{showFullText ? fullText : truncatedText}...</p>
+        <p>{showFullText ? fullText : truncatedText}...</p>
+
           <button className="view-btn" onClick={() => setShowFullText(!showFullText)}>
             {showFullText ? "View Less" : "View More"}
           </button>
