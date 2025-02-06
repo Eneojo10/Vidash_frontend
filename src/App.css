@@ -2826,6 +2826,9 @@ h4 {
   .amb-text p{
     font-size: 22px;
   }
+  .footer-color{
+    height: 500px;
+  }
   .cd-text small{
     font-size: 18px;
   }
