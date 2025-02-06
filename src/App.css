@@ -204,9 +204,7 @@ ul li ul li:hover {
 .navItems ul li {
   margin-top: 18px;
 }
-.quote p {
-  /* font-size: 20px; */
-}
+
 /* Home section */
 .homebannerImage {
   overflow: hidden;
@@ -2844,7 +2842,7 @@ h4 {
     font-size: 44px;
   }
   .quote p{
-    font-size: 28px;
+    font-size: 24px;
   }
   .headeros h1{
     font-size: 35px;
