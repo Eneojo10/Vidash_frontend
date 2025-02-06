@@ -2802,6 +2802,9 @@ h4 {
   .amb-text{
     width: 100%;
   }
+  .aminu-images img{
+    object-fit: contain;
+  }
   
 }
 
@@ -3018,6 +3021,7 @@ h4 {
   .aminu-images img{
     height: 630px;
     object-position: top;
+    
   }
   .view-btn{
     font-size: 20px;
