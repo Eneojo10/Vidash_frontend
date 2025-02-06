@@ -288,93 +288,15 @@ function Homebanner() {
             <p>Discover properties that suit your lifestyle.</p>
 
           </div>
-          {/* <button className='buyMobile_btn'>
-            <a href='#'>Buy</a>
-          </button>
-          <button className='rentMobile_btn'>
-            <a href='#'>Rent</a>
-          </button> */}
+          
         </div>
 
-        {/* <div className='mobileSearchbar'>
-          <input type='text' className='m-srchbar' placeholder='Search' onChange={(e) => setSearchinput(e.target.value)} />
-          <FaSearch onClick={mbSeaacher} />
-        </div> */}
+        
 
 
-        {/* <div className={searchActive}>
-          {FinalResult.map((data) => {
-            console.log(data);
-            return (
-              <div key={data.id}>
-                <p>price: {data.price}</p>
-                <p>location: {data.location}</p>
-                <p>type: {data.type}</p>
-              </div>
-            );
-          })}
-
-
-        </div> */}
-
-
-        {/* <div className='categoryHolder'>
-          <h3>Properties Categories</h3>
-          <div className='categoryButton'>
-            <button className='mobile-button'>Houses</button>
-            <button className='mobile-button'>Land</button>
-            <button className='mobile-button'>Duplex</button>
-            <button className='mobile-button'>Flat</button>
-          </div>
-        </div> */}
-
-        {/* <div className='popularSec'>
-          <div className='caption'>
-            <div className='title'>
-              <h3>Most Popular</h3>
-            </div>
-            <div className='seeAll'>
-              <h5>See All</h5>
-            </div>
-          </div>
-          <div className='popularDisplay'>
-            <div className='mobileGrid'>
-              <div className='cardM'>
-                <img src='/duplex1.jpeg' alt='' />
-                <div className='cardMDescp'>
-                  <FaLocationDot className='moble-icons' />
-                  <p>Five bedroom duplex Lugbe, abuja</p>
-                </div>
-              </div>
-              <div className='cardM'>
-                <img src='/city1.jpeg' alt='' />
-                <div className='cardMDescp'>
-                  <FaLocationDot className='moble-icons' />
-                  <p>Five bedroom duplex Lugbe, abuja</p>
-                </div>
-              </div>
-              <div className='cardM'>
-                <img src='/city2.jpeg' alt='' />
-                <div className='cardMDescp'>
-                  <FaLocationDot className='moble-icons' />
-                  <p>Five bedroom duplex Lugbe, abuja</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        {/* <MobileServices />
-        <Mobilespecial /> */}
-
-
-        {/* <Sider
-          firstImage='duplex2.avif'
-          secImage='flat6.avif'
-          thirdImage='flat7.jpeg'
-        /> */}
+        
       </div>
-      {/* <MobileFooter className='mobileFooterTag' /> */}
+     
 
       <div className='desktopDetails'>
         <div className='slider-container-main'>
@@ -402,7 +324,7 @@ function Homebanner() {
 
           
         </div>
-
+        
 
         <div className={searchActive}>
           <div>
