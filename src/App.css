@@ -2972,7 +2972,7 @@ h4 {
     font-size: 18px;
   }
   .card-color{
-    height: 180px;
+    height: 165px;
   }
   .ph-text h3{
     font-size: 30px;
@@ -2998,7 +2998,9 @@ h4 {
   .area-right-side-boxshadowonetwo{
     height: 630px;
   }
-  
+  .card img {
+    height: 450px;
+  }
   .ov h4{
     font-size: 23px;
   }
