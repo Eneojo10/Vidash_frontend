@@ -2823,6 +2823,9 @@ h4 {
 }
 
 @media (min-width: 1450px) {
+  .amb-text p{
+    font-size: 20px;
+  }
   .homebannerImage img {
     height: 500px;
     width: 100%;
