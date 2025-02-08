@@ -377,11 +377,11 @@ function Homebanner() {
           </div>
         </div>
 
-        {showScroll && (
+        {/* {showScroll && (
           <div className='scroll-to-top' onClick={scrollToTop}>
             <MdArrowUpward className='arrow-up-icon' />
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

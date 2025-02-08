@@ -125,7 +125,7 @@ function Terms() {
                         </div><br />
                         <div className='terms-details'>
                             <h4>7. Indemnification</h4>
-                            <p>Welcome to VidashCityShelters. These terms and conditions outline the rules and regulations for the use of VidashCityShelters Website, located at VidashCityShelter.ng.
+                            <p>Welcome to VidashCityShelters. These terms and conditions outline the rules and regulations for the use of VidashCityShelters Website, located at VidashCityShelter.com.ng.
 
                                 By accessing this website, we assume you accept these terms and conditions. Do not continue to use VidashCityShelters if you do not agree to all of the terms and conditions stated on this page.</p>
                         </div><br />

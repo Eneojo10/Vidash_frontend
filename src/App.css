@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 .App {
   padding: 0px;
@@ -21,7 +19,7 @@
   display: none;
 }
 .carousel-inner img {
-  height: 400px; /* Adjust based on your design */
+  height: 400px; 
   object-fit: cover;
 }
 /* moblie  */
@@ -34,6 +32,7 @@
 .mobileV {
   display: none;
 }
+
 /* general items  */
 .button {
   padding: 5px 10px;
@@ -409,7 +408,7 @@ ul li ul li:hover {
   font-weight: 400;
 }
 .load-more-btn:hover {
-  background-color: #cf7500;
+  background-color: var(--second-bg-gold);
   color: white;
 }
 .figure {
@@ -1257,7 +1256,7 @@ h4 {
   background: transparent;
   color: white;
   border: none;
-  background-color: #d7b39a;
+  background-color: var(--second-bg-gold);
   padding: 5px 10px;
   border-radius: 8px;
   font-size: 12px;
@@ -1266,7 +1265,7 @@ h4 {
   position: fixed;
   bottom: 20px;
   right: 10px;
-  background-color: #d7b39a;
+  background-color: var(--second-bg-gold);
   color: white;
   padding: 10px;
   /* border-radius: 50%; */
@@ -1294,7 +1293,7 @@ h4 {
   width: 100%;
 }
 .scroll-to-top:hover {
-  background-color: #d7b39a;
+  background-color: var(--second-bg-gold);
 }
 .ph-text-mobile {
   display: none;
@@ -1903,7 +1902,7 @@ h4 {
   background: transparent;
   color: white;
   cursor: pointer;
-  background-color: #d7b39a;
+  background-color: var(--second-bg-gold);
   padding: 10px;
   font-size: 18px;
   border-radius: 2px;
