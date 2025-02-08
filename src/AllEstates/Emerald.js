@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { MdArrowUpward } from 'react-icons/md'; // Import the icon
 import Navigation from '../pageSections/Navigation';
 import Footer from '../pageSections/Footer';
 import { useParams } from 'react-router-dom';
@@ -33,6 +34,20 @@ const SectionOneGrid = () => {
   const [showAll, setShowAll] = useState(false);
   const [loading, setLoading] = useState(true);
   const { estate_id } = useParams();
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScroll(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   useEffect(() => {
     if (!estate_id) {
@@ -49,14 +64,13 @@ const SectionOneGrid = () => {
         console.error('Error fetching estate:', err);
         setEstate([]);
       } finally {
-        setLoading(false); 
+        setLoading(false);
       }
     };
 
     fetchData();
   }, [estate_id]);
 
-  
   const displayedEstates = showAll ? estate : estate.slice(0, 3);
 
   return (
@@ -88,9 +102,8 @@ const SectionOneGrid = () => {
                 titles={estateItem.descriptions}
                 size={estateItem.size}
               />
-              <br/><br/>
+              <br /><br />
             </a>
-          
           ))
         ) : (
           <p>No estates found</p>
@@ -98,7 +111,6 @@ const SectionOneGrid = () => {
       </div>
       <br />
 
-      
       {!showAll && estate.length > 3 && (
         <div className="estate-view-more">
           <button className="estate-view-btn" onClick={() => setShowAll(true)}>
@@ -106,7 +118,13 @@ const SectionOneGrid = () => {
           </button>
         </div>
       )}
-      
+
+      {showScroll && (
+        <div className="scroll-to-top" onClick={scrollToTop}>
+          <MdArrowUpward className="arrow-up-icon" />
+        </div>
+      )}
+
       <Footer />
     </div>
   );
