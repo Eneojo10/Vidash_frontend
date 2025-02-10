@@ -414,12 +414,12 @@ function AreaDetailstwo() {
                                             <option value="land">Other</option>
                                         </select>
                                     </div>
-                                    <div className="insp--input-tag-v">
+                                    {/* <div className="insp--input-tag-v">
                                         <ReCAPTCHA
                                             sitekey={recaptchaKey}
                                             onChange={handleCaptchaChange}
                                         />
-                                    </div><br/>
+                                    </div><br/> */}
                                     {/* <div className='agree'>
                                         <input type='checkbox' id='agree' checked={isChecked} onChange={handleCheckboxChange}></input>
                                         <label htmlFor='agree'>By submitting this form I agree to <a href='/terms and condition' className='terms'>Terms of Use</a></label>
