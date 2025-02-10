@@ -402,8 +402,8 @@ function AreaDetailstwo() {
                                     <div className='insp--input-tag-v'>
                                         <input type='text' placeholder='Email' name='email' />
                                     </div>
-                                    <div className='tour-select-v'>
-                                        <textarea type='text' name='message' placeholder='Message'>Hello, I am interested in [Emerald]</textarea>
+                                    <div className='tour-select-v'> 
+                                        <textarea type='text' name='message' placeholder='Message'>Hello, I am interested in this [Property]</textarea>
                                     </div>
                                     <div className='insp--input-tag-v'>
                                         <select name="propertyType">
