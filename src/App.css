@@ -2392,6 +2392,7 @@ h4 {
   }
   .similar{
     width: 100%;
+    margin: auto;
   }
   .abt-vidash h3 {
     font-size: 20px;
