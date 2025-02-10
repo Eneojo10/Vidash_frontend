@@ -390,9 +390,14 @@ function AreaDetailstwo() {
                         <div className='area2-boxshadow'>
                             <div className='area2--boxshadow'>
                                 <div className='view-listing'><br />
-                                    <div className='vn'>
-                                        <img className='rounded' src='https://acerealestates.ng/wp-content/themes/houzez/img/profile-avatar.png' alt='vidash'></img>
-                                    </div><br />
+                                    <div className='vidash-vidash d-flex gap-1'>
+                                        <div className='vn'>
+                                            <img className='rounded' src='https://acerealestates.ng/wp-content/themes/houzez/img/profile-avatar.png' alt='vidash'></img>
+                                        </div>
+                                        <div className='vdashtext'>
+                                            <h5>VidashCityShelters</h5>
+                                        </div>
+                                    </div><br/>
                                     <div className='insp--input-tag-v'>
                                         <input type='text' placeholder='Name' name='email' />
                                     </div>
@@ -402,7 +407,7 @@ function AreaDetailstwo() {
                                     <div className='insp--input-tag-v'>
                                         <input type='text' placeholder='Email' name='email' />
                                     </div>
-                                    <div className='tour-select-v'> 
+                                    <div className='tour-select-v'>
                                         <textarea type='text' name='message' placeholder='Message'>Hello, I am interested in this [Property]</textarea>
                                     </div>
                                     <div className='insp--input-tag-v'>
@@ -419,7 +424,7 @@ function AreaDetailstwo() {
                                             sitekey={recaptchaKey}
                                             onChange={handleCaptchaChange}
                                         />
-                                    </div><br/>
+                                    </div><br />
                                     {/* <div className='agree'>
                                         <input type='checkbox' id='agree' checked={isChecked} onChange={handleCheckboxChange}></input>
                                         <label htmlFor='agree'>By submitting this form I agree to <a href='/terms and condition' className='terms'>Terms of Use</a></label>

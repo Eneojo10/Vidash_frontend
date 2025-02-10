@@ -2138,7 +2138,15 @@ h4 {
   margin: auto;
 }
 .vn img{
+  width: 100%;
+}
+.vn{
   width: 25%;
+}
+.vdashtext h5{
+  font-size: 16px;
+  color: #ebb068;
+  padding-top: 20px;
 }
 .listing-btn{
   background: transparent;
