@@ -2899,6 +2899,9 @@ h4 {
   .amb-text p{
     font-size: 23px;
   }
+  .area2--boxshadow{
+    height: 50vh;
+  }
   .footer-color{
     height: 510px;
   }
