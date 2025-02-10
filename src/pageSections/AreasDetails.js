@@ -8,12 +8,13 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { BASE_URL } from '../utils/global';
 import axios from 'axios'
 import { useParams } from 'react-router-dom';
+import { ClipLoader } from "react-spinners";
 
 function AreasDetails() {
     const [area, setArea] = useState([])
     const { areaName } = useParams();
-
-
+    const [recent, setRecent] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         if (!areaName) {
@@ -38,6 +39,26 @@ function AreasDetails() {
 
         fetchData();
     }, [areaName]);
+
+    useEffect(() => {
+        const fetchRecent = async () => {
+            try {
+                const response = await axios.get(`${BASE_URL}/getRecent`);
+                console.log("Recent response:", response.data);
+
+                if (response.data && Array.isArray(response.data.data)) {
+                    setRecent(response.data.data);
+                } else {
+                    console.log("Unexpected data format from post:", response.data);
+                }
+            } catch (error) {
+                console.log(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchRecent();
+    }, []);
 
     return (
         <div>
@@ -101,11 +122,30 @@ function AreasDetails() {
                             </div>
                         </div><br />
                         <div className='area-right-side-boxshadow'>
-                            <div className='right-side-image'>
-                                <h4>Featured Properties</h4><br />
-                                <img src={image} alt='' />
-                            </div>
-                        </div><br />
+                            {loading ? (
+                                <div className="spinner-container">
+                                    <ClipLoader color="#123abc" loading={loading} size={50} />
+                                </div>
+                            ) : recent.length > 0 ? (
+                                <>
+                                    <a href={`/ProjectDetails/${recent[0]._id}`} className='link'>
+                                        <div className='right-side-image'>
+                                           <div className='right-side-image'>
+                                           <h4>Featured Property</h4>
+                                           </div>
+                                            <img src={recent[0].imageUrl} alt='Featured Property' />
+                                        </div>
+                                    </a>
+                                </>
+                            ) : (
+                                <p>No recent properties available.</p>
+                            )}
+                        </div>
+
+                        <br />
+
+                        <br />
+
                         <div className='area-right-side-boxshadowone'>
                             <div className='right-side-image'>
                                 <h4>Property Status</h4><br />
