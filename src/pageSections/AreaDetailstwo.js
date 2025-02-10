@@ -8,8 +8,10 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import ReCAPTCHA from "react-google-recaptcha";
 
 function AreaDetailstwo() {
+    const recaptchaKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [tour_id, setTour] = useState('')
@@ -185,6 +187,15 @@ function AreaDetailstwo() {
     const handleMessageChange = (event) => {
         setMessage(event.target.value)
     }
+
+    const handleCaptchaChange = (value) => {
+        console.log("Captcha value:", value);
+    };
+
+
+
+
+
     return (
         <div>
             <Navigation />
@@ -378,7 +389,46 @@ function AreaDetailstwo() {
 
                         <div className='area2-boxshadow'>
                             <div className='area2--boxshadow'>
+                                <div className='view-listing'><br />
+                                    <div className='vn'>
+                                        <img className='rounded' src='https://acerealestates.ng/wp-content/themes/houzez/img/profile-avatar.png' alt='vidash'></img>
+                                    </div><br />
+                                    <div className='insp--input-tag-v'>
+                                        <input type='text' placeholder='Name' name='email' />
+                                    </div>
+                                    <div className='insp--input-tag-v'>
+                                        <input type='phone' placeholder='Phone' name='email' />
+                                    </div>
+                                    <div className='insp--input-tag-v'>
+                                        <input type='text' placeholder='Email' name='email' />
+                                    </div>
+                                    <div className='tour-select-v'>
+                                        <textarea type='text' name='message' placeholder='Message'>Hello, I am interested in [Emerald]</textarea>
+                                    </div>
+                                    <div className='insp--input-tag-v'>
+                                        <select name="propertyType">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="apartment">I'm a buyer</option>
+                                            <option value="house">I'm a tenant</option>
+                                            <option value="condo">I'm an agent</option>
+                                            <option value="land">Other</option>
+                                        </select>
+                                    </div>
+                                    <div className="insp--input-tag-v">
+                                        <ReCAPTCHA
+                                            sitekey={recaptchaKey}
+                                            onChange={handleCaptchaChange}
+                                        />
+                                    </div><br/>
+                                    {/* <div className='agree'>
+                                        <input type='checkbox' id='agree' checked={isChecked} onChange={handleCheckboxChange}></input>
+                                        <label htmlFor='agree'>By submitting this form I agree to <a href='/terms and condition' className='terms'>Terms of Use</a></label>
+                                    </div> */}
+                                    <div className='view-listing-button'>
+                                        <button className='listing-btn'>Send Message</button>
+                                    </div>
 
+                                </div>
                             </div>
                         </div>
                     </div>

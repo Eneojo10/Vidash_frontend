@@ -1573,7 +1573,8 @@ h4 {
   width: 70%;
 }
 .onnn {
-  width: 25%;
+  width: 28%;
+  margin-top: 5px;
 }
 .onn p {
   color: #7f8ea7;
@@ -1591,7 +1592,7 @@ h4 {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   margin-top: 35px;
 }
 .box0 {
@@ -1902,6 +1903,20 @@ h4 {
   outline: none;
   border: 3px solid #dce0e0;
 }
+.insp--input-tag-v input{
+  padding: 5px;
+  width: 100%;
+  outline: none;
+  border: 3px solid #dce0e0;
+  margin-bottom: 15px;
+}
+.insp--input-tag-v select{
+  padding: 5px;
+  width: 100%;
+  outline: none;
+  border: 3px solid #dce0e0;
+  margin-bottom: 15px;
+}
 .inspection-btn {
   border: none;
   background: transparent;
@@ -2113,6 +2128,29 @@ h4 {
   to {
     transform: rotate(360deg);
   }
+}
+.view-listing{
+  width: 85%;
+  margin: auto;
+}
+.vn img{
+  width: 25%;
+}
+
+.listing-btn{
+  background: transparent;
+  padding: 10px 10px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.tour-select-v textarea{
+  width: 100%;
+  height: 110px;
+  outline: none;
+  margin-bottom: 10px;
 }
 
 /* Responsiveness */
