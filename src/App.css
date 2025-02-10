@@ -2368,8 +2368,6 @@ h4 {
   .colors {
     display: block;
     width: 95%;
-    /* height: 10px; */
-    /* margin-bottom: 100px; */
   }
   .estate--dropdown {
     width: 100%;
@@ -2383,11 +2381,17 @@ h4 {
     display: block;
     color: black;
   }
+  .area2--boxshadow{
+    height: 80vh;
+  }
   .abt-vidash {
     width: 95%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
+  }
+  .similar{
+    width: 100%;
   }
   .abt-vidash h3 {
     font-size: 20px;
@@ -2445,6 +2449,9 @@ h4 {
   .cards {
     margin-bottom: 30px;
     width: 100%;
+  }
+  .card{
+    margin-bottom: 20px;
   }
   .hea_ders {
     width: 100%;
@@ -2634,10 +2641,13 @@ h4 {
   .leaders-gridd {
     display: block;
   }
+  .onnn{
+    width: 100%;
+  }
   .area2-boxshadow,
   .similar,
   .onnn p {
-    display: none;
+    display: block;
   }
   .box1 {
     height: 950px;
@@ -2753,8 +2763,9 @@ h4 {
   .prop-box-shadow {
     width: 100%;
   }
-  .propdetailsbtn {
-    /* display: none; */
+  .details{
+    padding: 10px 15px;
+    font-size: 16px;
   }
   .popbg {
     padding-top: 170px;
