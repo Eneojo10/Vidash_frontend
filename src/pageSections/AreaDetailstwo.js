@@ -11,6 +11,7 @@ import { useParams } from 'react-router-dom';
 import ReCAPTCHA from "react-google-recaptcha";
 
 function AreaDetailstwo() {
+    const onChange = () => {};
     const recaptchaKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -397,7 +398,7 @@ function AreaDetailstwo() {
                                         <div className='vdashtext'>
                                             <h5>VidashCityShelters</h5>
                                         </div>
-                                    </div><br/>
+                                    </div><br />
                                     <div className='insp--input-tag-v'>
                                         <input type='text' placeholder='Name' name='email' />
                                     </div>
@@ -420,10 +421,11 @@ function AreaDetailstwo() {
                                         </select>
                                     </div>
                                     <div className="insp--input-tag-v">
+                                        
                                         <ReCAPTCHA
                                             sitekey={recaptchaKey}
-                                            onChange={handleCaptchaChange}
-                                        />
+                                            onChange={onChange}
+                                        />,
                                     </div><br />
                                     {/* <div className='agree'>
                                         <input type='checkbox' id='agree' checked={isChecked} onChange={handleCheckboxChange}></input>
