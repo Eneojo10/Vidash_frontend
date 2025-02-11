@@ -734,8 +734,6 @@ h4 {
   color: black;
 }
 .productDetailsPage {
-  /* padding: 70px 100px 100px; */
-  /* background-color: white; */
   margin-bottom: 100px;
 }
 .landmark {
@@ -834,11 +832,6 @@ h4 {
 .addition {
   padding: 80px;
 }
-/* .color1 {
-  background-color: #fafafa;
-  height: 300px;
-  width: 100%;
-} */
 
 .colors {
   width: 35%;
@@ -895,7 +888,6 @@ h4 {
 .contactSec {
   background-color: black;
   height: 450px;
-  /* margin-bottom: 150px; */
 }
 .contact--info {
   width: 35%;
