@@ -430,7 +430,7 @@ function AreaDetailstwo() {
                                             sitekey="6Lc0o9MqAAAAAF9hNl8-HFd8sXv627bl85gVhGIt"
                                             onChange={handleCaptchaChange}
                                         />
-                                    </div>
+                                    </div><br/>
                                     {/* <div className='agree'>
                                         <input type='checkbox' id='agree' checked={isChecked} onChange={handleCheckboxChange}></input>
                                         <label htmlFor='agree'>By submitting this form I agree to <a href='/terms and condition' className='terms'>Terms of Use</a></label>
