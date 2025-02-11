@@ -2904,6 +2904,11 @@ h4 {
     transform: rotate(360deg);
   }
 }
+@media (min-width: 390px) {
+  .area2--boxshadow{
+    height: 90vh;
+  }
+}
 
 @media (min-width: 1450px) {
   .amb-text p{
