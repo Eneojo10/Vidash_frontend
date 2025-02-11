@@ -12,7 +12,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 function AreaDetailstwo() {
     
-    const recaptchaKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
+    // const recaptchaKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [tour_id, setTour] = useState('')
@@ -427,7 +427,7 @@ function AreaDetailstwo() {
                                     <div className="insp--input-tag-v">
                                         
                                         <ReCAPTCHA
-                                            sitekey={recaptchaKey}
+                                            sitekey="6Lc0o9MqAAAAAF9hNl8-HFd8sXv627bl85gVhGIt"
                                             onChange={handleCaptchaChange}
                                         />
                                     </div>
