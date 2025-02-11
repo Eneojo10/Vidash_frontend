@@ -11,8 +11,8 @@ import { useParams } from 'react-router-dom';
 import ReCAPTCHA from "react-google-recaptcha";
 
 function AreaDetailstwo() {
-    const onChange = () => {};
-    // const recaptchaKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
+    
+    const recaptchaKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [tour_id, setTour] = useState('')
@@ -28,6 +28,9 @@ function AreaDetailstwo() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { id } = useParams()
+    const [captchaValue, setCaptchaValue] = useState(null);
+
+    
 
 
 
@@ -191,6 +194,7 @@ function AreaDetailstwo() {
 
     const handleCaptchaChange = (value) => {
         console.log("Captcha value:", value);
+        setCaptchaValue(value);
     };
 
 
@@ -423,10 +427,10 @@ function AreaDetailstwo() {
                                     <div className="insp--input-tag-v">
                                         
                                         <ReCAPTCHA
-                                            sitekey="6Lc0o9MqAAAAAF9hNl8-HFd8sXv627bl85gVhGIt"
-                                            onChange={onChange}
-                                        />,
-                                    </div><br />
+                                            sitekey={recaptchaKey}
+                                            onChange={handleCaptchaChange}
+                                        />
+                                    </div>
                                     {/* <div className='agree'>
                                         <input type='checkbox' id='agree' checked={isChecked} onChange={handleCheckboxChange}></input>
                                         <label htmlFor='agree'>By submitting this form I agree to <a href='/terms and condition' className='terms'>Terms of Use</a></label>
