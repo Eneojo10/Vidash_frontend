@@ -11,7 +11,7 @@ import { useParams } from 'react-router-dom';
 import ReCAPTCHA from "react-google-recaptcha";
 
 function AreaDetailstwo() {
-    
+
     // const recaptchaKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -30,7 +30,7 @@ function AreaDetailstwo() {
     const { id } = useParams()
     const [captchaValue, setCaptchaValue] = useState(null);
 
-    
+
 
 
 
@@ -425,12 +425,12 @@ function AreaDetailstwo() {
                                         </select>
                                     </div>
                                     <div className="insp--input-tag-v">
-                                        
+
                                         <ReCAPTCHA
                                             sitekey="6Lc0o9MqAAAAAF9hNl8-HFd8sXv627bl85gVhGIt"
                                             onChange={handleCaptchaChange}
                                         />
-                                    </div><br/>
+                                    </div><br />
                                     {/* <div className='agree'>
                                         <input type='checkbox' id='agree' checked={isChecked} onChange={handleCheckboxChange}></input>
                                         <label htmlFor='agree'>By submitting this form I agree to <a href='/terms and condition' className='terms'>Terms of Use</a></label>
@@ -447,7 +447,9 @@ function AreaDetailstwo() {
 
                 </div><br />
                 <div className='similar'>
-                    <h4>Similar Listings</h4><br />
+                    <div className='sim'>
+                        <h4>Similar Listings</h4>
+                    </div><br />
                     <div className='boxline'></div><br />
 
                     <div className='similar-listings'>

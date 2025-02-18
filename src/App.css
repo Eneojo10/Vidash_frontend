@@ -1586,7 +1586,7 @@ h4 {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   width: 100%;
-  /* height: 120vh; */
+  height: 115vh;
   margin-top: 35px;
 }
 .box0 {
@@ -2182,8 +2182,9 @@ h4 {
   .columns1 h3 {
     font-size: 20px;
   }
-  .similar h4{
-    margin-left: 6px;
+  .sim{
+    width: 97%;
+    margin: auto;
   }
   .sectionOneGridd {
     display: block;
@@ -2385,7 +2386,7 @@ h4 {
     color: black;
   }
   .area2--boxshadow{
-    height: 120vh;
+    height: 75vh;
     width: 97%;
     margin: auto;
   }
@@ -2904,11 +2905,11 @@ h4 {
     transform: rotate(360deg);
   }
 }
-@media (min-width: 390px) {
+/* @media (min-width: 390px) {
   .area2--boxshadow{
     height: 115vh;
   }
-}
+} */
 
 @media (min-width: 1450px) {
   .amb-text p{
